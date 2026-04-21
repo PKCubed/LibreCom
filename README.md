@@ -17,7 +17,8 @@ The belt packs are designed to be cheap, rugged, and feature-rich for live-event
 * **Standard Headset Support:** Uses universal TRRS (3.5mm) headsets (CTIA/OMTP) via a dedicated hardware audio codec.
 * **Local IEM Mixing:** Features an external stereo input jack. You can plug in an In-Ear Monitor (IEM) pack or scanner, and the belt pack will mix this audio locally with the coms feed.
 * **Spatial Panning:** Comm audio can be software-panned entirely to the Left or Right ear, allowing users to separate program audio from crew chatter.
-* **Physical Controls:** * Volume Knob
+* **Physical Controls:**
+  * Volume Knob
   * Push-To-Talk (PTT) Button
   * Push-To-Mute Button (Configurable to mute either the mic, the comm feed, or the local IEM feed)
 * **VOX Support:** Voice Operated Exchange for hands-free operation without needing the PTT button.
