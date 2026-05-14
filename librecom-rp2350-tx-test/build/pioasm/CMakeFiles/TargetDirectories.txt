@@ -1,0 +1,7 @@
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/pioasm.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/edit_cache.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/rebuild_cache.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/list_install_components.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/install.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/install/local.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pioasm/CMakeFiles/install/strip.dir

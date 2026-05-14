@@ -1,0 +1,10 @@
+prefix=C:/Program Files (x86)/CODEC2
+libdir=C:/Program Files (x86)/CODEC2/lib
+includedir=C:/Program Files (x86)/CODEC2/include
+
+Name: codec2
+Description: A speech codec for 2400 bit/s and below
+Requires: 
+Version: 1.2.0
+Libs: -L${libdir} -lcodec2
+Cflags: -I${includedir} -I${includedir}/codec2

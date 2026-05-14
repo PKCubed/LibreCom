@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild-complete.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule"
+		},
+		{
+			"file" : "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"picotoolBuild"
+		],
+		"name" : "picotoolBuild"
+	}
+}
