@@ -323,7 +323,7 @@ CODEC2_IS_TOP_LEVEL:STATIC=OFF
 CODEC2_LIBRARY:FILEPATH=CODEC2_LIBRARY-NOTFOUND
 
 //Root folder of Codec2 install
-CODEC2_ROOT:PATH=
+CODEC2_ROOT:PATH=C:/dev/codec2/build
 
 //Value Computed by CMake
 CODEC2_SOURCE_DIR:STATIC=C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/external/codec2

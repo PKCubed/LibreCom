@@ -39,19 +39,47 @@ high_loop:
 .wrap
 
 .program i2s_rx_data
-; wait pin base must point to DATA pin so BCK is pin index +2.
+; wait pin base must point to DATA pin so LRCK is pin index +1 and BCK is pin index +2.
 ; in pin base must point to DATA pin.
 .wrap_target
+    wait 0 pin 1
+    wait 0 pin 2
+    wait 1 pin 2
+    set x, 31
+left_word:
     wait 0 pin 2
     wait 1 pin 2
     in pins, 1
+    jmp x-- left_word
+
+    wait 1 pin 1
+    wait 0 pin 2
+    wait 1 pin 2
+    set x, 31
+right_word:
+    wait 0 pin 2
+    wait 1 pin 2
+    in pins, 1
+    jmp x-- right_word
 .wrap
 
 .program i2s_tx_data
-; wait pin base must point to DATA pin so BCK is pin index +2.
+; wait pin base must point to DATA pin so LRCK is pin index +1 and BCK is pin index +2.
 ; out pin base must point to DATA pin.
 .wrap_target
+    wait 0 pin 1
+    set x, 31
+left_word:
     wait 0 pin 2
     out pins, 1
     wait 1 pin 2
+    jmp x-- left_word
+
+    wait 1 pin 1
+    set x, 31
+right_word:
+    wait 0 pin 2
+    out pins, 1
+    wait 1 pin 2
+    jmp x-- right_word
 .wrap

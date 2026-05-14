@@ -2,6 +2,8 @@ C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFile
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/audio_link_tx_i2s_audio_pio_h.dir
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/audio_link_rx.dir
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/audio_link_rx_i2s_audio_pio_h.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/audio_sine_tx.dir
+C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/audio_sine_tx_i2s_audio_pio_h.dir
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/edit_cache.dir
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/rebuild_cache.dir
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/CMakeFiles/list_install_components.dir

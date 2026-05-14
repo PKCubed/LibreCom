@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-y9klb4"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-y9klb4"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-6xs31v"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-6xs31v"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -50,10 +50,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-y9klb4'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-6xs31v'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_4d8a2
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_5667c
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\cc.exe
         Target: x86_64-w64-mingw32
@@ -61,8 +61,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (Rev2, Built by MSYS2 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_4d8a2.dir/'
-         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4d8a2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\peter\\AppData\\Local\\Temp\\cciBn89E.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5667c.dir/'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5667c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\peter\\AppData\\Local\\Temp\\ccQsIqsU.s
         GNU C17 (Rev2, Built by MSYS2 project) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -81,13 +81,13 @@ events:
          C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed
         End of search list.
         Compiler executable checksum: bfed5edf6a89cec0a35941200a765959
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_4d8a2.dir/'
-         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj C:\\Users\\peter\\AppData\\Local\\Temp\\cciBn89E.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5667c.dir/'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj C:\\Users\\peter\\AppData\\Local\\Temp\\ccQsIqsU.s
         GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.43.1
         COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj -o cmTC_4d8a2.exe -Wl,--out-implib,libcmTC_4d8a2.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj -o cmTC_5667c.exe -Wl,--out-implib,libcmTC_5667c.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\cc.exe
         COLLECT_LTO_WRAPPER=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
@@ -98,12 +98,12 @@ events:
         gcc version 14.2.0 (Rev2, Built by MSYS2 project) 
         COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4d8a2.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_4d8a2.'
-         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cccyabpP.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4d8a2.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_4d8a2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5667c.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5667c.'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cco6bs31.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_5667c.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5667c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cccyabpP.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4d8a2.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_4d8a2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cco6bs31.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_5667c.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5667c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (GNU Binutils) 2.43.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4d8a2.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_4d8a2.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5667c.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5667c.'
         
       exitCode: 0
   -
@@ -136,10 +136,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-y9klb4']
+        ignore line: [Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-6xs31v']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_4d8a2]
-        ignore line: [[1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_5667c]
+        ignore line: [[1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\cc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -147,8 +147,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (Rev2  Built by MSYS2 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_4d8a2.dir/']
-        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4d8a2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\peter\\AppData\\Local\\Temp\\cciBn89E.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5667c.dir/']
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5667c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\peter\\AppData\\Local\\Temp\\ccQsIqsU.s]
         ignore line: [GNU C17 (Rev2  Built by MSYS2 project) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -167,8 +167,8 @@ events:
         ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: bfed5edf6a89cec0a35941200a765959]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_4d8a2.dir/']
-        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj C:\\Users\\peter\\AppData\\Local\\Temp\\cciBn89E.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5667c.dir/']
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj C:\\Users\\peter\\AppData\\Local\\Temp\\ccQsIqsU.s]
         ignore line: [GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.43.1]
         ignore line: [COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/]
@@ -179,8 +179,8 @@ events:
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj -o cmTC_4d8a2.exe -Wl --out-implib libcmTC_4d8a2.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj -o cmTC_5667c.exe -Wl --out-implib libcmTC_5667c.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\cc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe]
@@ -198,13 +198,13 @@ events:
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4d8a2.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_4d8a2.']
-        link line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cccyabpP.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4d8a2.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_4d8a2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5667c.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5667c.']
+        link line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cco6bs31.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_5667c.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5667c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cccyabpP.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cco6bs31.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -226,7 +226,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_4d8a2.exe] ==> ignore
+          arg [cmTC_5667c.exe] ==> ignore
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o]
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -236,9 +236,9 @@ events:
           arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_4d8a2.dll.a] ==> ignore
+          arg [libcmTC_5667c.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -263,7 +263,7 @@ events:
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o]
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cccyabpP.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4d8a2.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_4d8a2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_4d8a2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\peter\\AppData\\Local\\Temp\\cco6bs31.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_5667c.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v CMakeFiles/cmTC_5667c.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5667c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         linker tool for 'C': C:/msys64/ucrt64/x86_64-w64-mingw32/bin/ld.exe
         remove lib [gcc_eh]
         remove lib [msvcrt]
@@ -303,8 +303,8 @@ events:
     checks:
       - "Looking for include file stdlib.h"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-8wj147"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-8wj147"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wzekzo"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wzekzo"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -314,11 +314,11 @@ events:
       variable: "HAVE_STDLIB_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-8wj147'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wzekzo'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_4fc40
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_4fc40.dir/HAVE_STDLIB_H.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-8wj147/HAVE_STDLIB_H.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_4fc40.dir/HAVE_STDLIB_H.c.obj -o cmTC_4fc40.exe -Wl,--out-implib,libcmTC_4fc40.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_8627b
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_8627b.dir/HAVE_STDLIB_H.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wzekzo/HAVE_STDLIB_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_8627b.dir/HAVE_STDLIB_H.c.obj -o cmTC_8627b.exe -Wl,--out-implib,libcmTC_8627b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -329,8 +329,8 @@ events:
     checks:
       - "Looking for include file string.h"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-dscoyg"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-dscoyg"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-gta01u"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-gta01u"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -340,11 +340,11 @@ events:
       variable: "HAVE_STRING_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-dscoyg'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-gta01u'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_381b8
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_381b8.dir/HAVE_STRING_H.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-dscoyg/HAVE_STRING_H.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_381b8.dir/HAVE_STRING_H.c.obj -o cmTC_381b8.exe -Wl,--out-implib,libcmTC_381b8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_63be3
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_63be3.dir/HAVE_STRING_H.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-gta01u/HAVE_STRING_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_63be3.dir/HAVE_STRING_H.c.obj -o cmTC_63be3.exe -Wl,--out-implib,libcmTC_63be3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -356,8 +356,8 @@ events:
     checks:
       - "Looking for __GNU_LIBRARY__"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-xlzfbk"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-xlzfbk"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wupvdd"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wupvdd"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -367,13 +367,13 @@ events:
       variable: "_GNU_SOURCE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-xlzfbk'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wupvdd'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_836a9
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_836a9.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-xlzfbk/CheckSymbolExists.c
-        FAILED: [code=1] CMakeFiles/cmTC_836a9.dir/CheckSymbolExists.c.obj 
-        C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_836a9.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-xlzfbk/CheckSymbolExists.c
-        C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-xlzfbk/CheckSymbolExists.c:2:10: fatal error: features.h: No such file or directory
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_3c7e9
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_3c7e9.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wupvdd/CheckSymbolExists.c
+        FAILED: [code=1] CMakeFiles/cmTC_3c7e9.dir/CheckSymbolExists.c.obj 
+        C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_3c7e9.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wupvdd/CheckSymbolExists.c
+        C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wupvdd/CheckSymbolExists.c:2:10: fatal error: features.h: No such file or directory
             2 | #include <features.h>
               |          ^~~~~~~~~~~~
         compilation terminated.
@@ -389,8 +389,8 @@ events:
     checks:
       - "Looking for _GNU_SOURCE"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7cy0r8"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7cy0r8"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7th9dy"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7th9dy"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -400,13 +400,13 @@ events:
       variable: "_GNU_SOURCE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7cy0r8'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7th9dy'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_e943d
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_e943d.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7cy0r8/CheckSymbolExists.c
-        FAILED: [code=1] CMakeFiles/cmTC_e943d.dir/CheckSymbolExists.c.obj 
-        C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_e943d.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7cy0r8/CheckSymbolExists.c
-        C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7cy0r8/CheckSymbolExists.c:2:10: fatal error: features.h: No such file or directory
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_63e97
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_63e97.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7th9dy/CheckSymbolExists.c
+        FAILED: [code=1] CMakeFiles/cmTC_63e97.dir/CheckSymbolExists.c.obj 
+        C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_63e97.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7th9dy/CheckSymbolExists.c
+        C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-7th9dy/CheckSymbolExists.c:2:10: fatal error: features.h: No such file or directory
             2 | #include <features.h>
               |          ^~~~~~~~~~~~
         compilation terminated.
@@ -422,8 +422,8 @@ events:
     checks:
       - "Looking for floor"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-93nr7l"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-93nr7l"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-44yrhi"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-44yrhi"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -433,11 +433,11 @@ events:
       variable: "HAVE_FLOOR"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-93nr7l'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-44yrhi'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_08f41
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_08f41.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-93nr7l/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_08f41.dir/CheckSymbolExists.c.obj -o cmTC_08f41.exe -Wl,--out-implib,libcmTC_08f41.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_717ca
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_717ca.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-44yrhi/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_717ca.dir/CheckSymbolExists.c.obj -o cmTC_717ca.exe -Wl,--out-implib,libcmTC_717ca.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -449,8 +449,8 @@ events:
     checks:
       - "Looking for ceil"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wvhisb"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wvhisb"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-41f9vm"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-41f9vm"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -460,11 +460,11 @@ events:
       variable: "HAVE_CEIL"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wvhisb'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-41f9vm'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_e8df4
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_e8df4.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wvhisb/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_e8df4.dir/CheckSymbolExists.c.obj -o cmTC_e8df4.exe -Wl,--out-implib,libcmTC_e8df4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_66af4
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_66af4.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-41f9vm/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_66af4.dir/CheckSymbolExists.c.obj -o cmTC_66af4.exe -Wl,--out-implib,libcmTC_66af4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -476,8 +476,8 @@ events:
     checks:
       - "Looking for pow"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-kdyuhd"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-kdyuhd"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-mzx7jv"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-mzx7jv"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -487,11 +487,11 @@ events:
       variable: "HAVE_POW"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-kdyuhd'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-mzx7jv'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_cb109
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_cb109.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-kdyuhd/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_cb109.dir/CheckSymbolExists.c.obj -o cmTC_cb109.exe -Wl,--out-implib,libcmTC_cb109.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_a6956
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_a6956.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-mzx7jv/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_a6956.dir/CheckSymbolExists.c.obj -o cmTC_a6956.exe -Wl,--out-implib,libcmTC_a6956.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -503,8 +503,8 @@ events:
     checks:
       - "Looking for sqrt"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-j16euj"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-j16euj"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-0cw4aa"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-0cw4aa"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -514,11 +514,11 @@ events:
       variable: "HAVE_SQRT"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-j16euj'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-0cw4aa'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_b6f44
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_b6f44.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-j16euj/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_b6f44.dir/CheckSymbolExists.c.obj -o cmTC_b6f44.exe -Wl,--out-implib,libcmTC_b6f44.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_35754
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_35754.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-0cw4aa/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_35754.dir/CheckSymbolExists.c.obj -o cmTC_35754.exe -Wl,--out-implib,libcmTC_35754.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -530,8 +530,8 @@ events:
     checks:
       - "Looking for sin"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ncx73l"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ncx73l"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-1cc2mn"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-1cc2mn"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -541,11 +541,11 @@ events:
       variable: "HAVE_SIN"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ncx73l'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-1cc2mn'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_7deba
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_7deba.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ncx73l/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_7deba.dir/CheckSymbolExists.c.obj -o cmTC_7deba.exe -Wl,--out-implib,libcmTC_7deba.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_21152
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_21152.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-1cc2mn/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_21152.dir/CheckSymbolExists.c.obj -o cmTC_21152.exe -Wl,--out-implib,libcmTC_21152.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -557,8 +557,8 @@ events:
     checks:
       - "Looking for cos"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ze6jzd"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ze6jzd"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-rvu29j"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-rvu29j"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -568,11 +568,11 @@ events:
       variable: "HAVE_COS"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ze6jzd'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-rvu29j'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_3f185
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_3f185.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-ze6jzd/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_3f185.dir/CheckSymbolExists.c.obj -o cmTC_3f185.exe -Wl,--out-implib,libcmTC_3f185.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_4dabd
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_4dabd.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-rvu29j/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_4dabd.dir/CheckSymbolExists.c.obj -o cmTC_4dabd.exe -Wl,--out-implib,libcmTC_4dabd.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -584,8 +584,8 @@ events:
     checks:
       - "Looking for atan2"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-96brbs"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-96brbs"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-yaj7w3"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-yaj7w3"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -595,11 +595,11 @@ events:
       variable: "HAVE_ATAN2"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-96brbs'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-yaj7w3'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_47d5d
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_47d5d.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-96brbs/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_47d5d.dir/CheckSymbolExists.c.obj -o cmTC_47d5d.exe -Wl,--out-implib,libcmTC_47d5d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_b1298
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_b1298.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-yaj7w3/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_b1298.dir/CheckSymbolExists.c.obj -o cmTC_b1298.exe -Wl,--out-implib,libcmTC_b1298.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -611,8 +611,8 @@ events:
     checks:
       - "Looking for log10"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wnnwhb"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wnnwhb"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-4o6ovp"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-4o6ovp"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -622,11 +622,11 @@ events:
       variable: "HAVE_LOG10"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wnnwhb'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-4o6ovp'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_2e7ae
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_2e7ae.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-wnnwhb/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_2e7ae.dir/CheckSymbolExists.c.obj -o cmTC_2e7ae.exe -Wl,--out-implib,libcmTC_2e7ae.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_b515d
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_b515d.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-4o6ovp/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_b515d.dir/CheckSymbolExists.c.obj -o cmTC_b515d.exe -Wl,--out-implib,libcmTC_b515d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -638,8 +638,8 @@ events:
     checks:
       - "Looking for round"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-n5nbfl"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-n5nbfl"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-88giyt"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-88giyt"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -649,11 +649,11 @@ events:
       variable: "HAVE_ROUND"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-n5nbfl'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-88giyt'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_76cd3
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_76cd3.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-n5nbfl/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_76cd3.dir/CheckSymbolExists.c.obj -o cmTC_76cd3.exe -Wl,--out-implib,libcmTC_76cd3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_c4b27
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_c4b27.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-88giyt/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_c4b27.dir/CheckSymbolExists.c.obj -o cmTC_c4b27.exe -Wl,--out-implib,libcmTC_c4b27.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -665,8 +665,8 @@ events:
     checks:
       - "Looking for getopt"
     directories:
-      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-im31d1"
-      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-im31d1"
+      source: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-bpyp9p"
+      binary: "C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-bpyp9p"
     cmakeVariables:
       CMAKE_C_FLAGS: " -Wall -Wno-strict-overflow"
       CMAKE_C_FLAGS_DEBUG: "-g -O2 -DDUMP"
@@ -676,11 +676,11 @@ events:
       variable: "HAVE_GETOPT"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-im31d1'
+        Change Dir: 'C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-bpyp9p'
         
-        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_813b8
-        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_813b8.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-im31d1/CheckSymbolExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_813b8.dir/CheckSymbolExists.c.obj -o cmTC_813b8.exe -Wl,--out-implib,libcmTC_813b8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/peter/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_c9133
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe   -Wall -Wno-strict-overflow -o CMakeFiles/cmTC_c9133.dir/CheckSymbolExists.c.obj -c C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/CMakeFiles/CMakeScratch/TryCompile-bpyp9p/CheckSymbolExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\ucrt64\\bin\\cc.exe -Wall -Wno-strict-overflow  CMakeFiles/cmTC_c9133.dir/CheckSymbolExists.c.obj -o cmTC_c9133.exe -Wl,--out-implib,libcmTC_c9133.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
 ...
