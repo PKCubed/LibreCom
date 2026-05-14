@@ -1,0 +1,27 @@
+.program i2s_adc_in
+
+.wrap_target
+    wait 0 gpio 2
+
+    wait 0 gpio 1
+    wait 1 gpio 1
+
+    set x, 31
+left_read:
+    wait 0 gpio 1
+    wait 1 gpio 1
+    in pins, 1
+    jmp x-- left_read
+
+    wait 1 gpio 2
+
+    wait 0 gpio 1
+    wait 1 gpio 1
+
+    set x, 31
+right_read:
+    wait 0 gpio 1
+    wait 1 gpio 1
+    in pins, 1
+    jmp x-- right_read
+.wrap
