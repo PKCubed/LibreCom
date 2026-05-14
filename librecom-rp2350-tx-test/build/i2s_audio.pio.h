@@ -122,34 +122,21 @@ static inline pio_sm_config lrck_from_bck_program_get_default_config(uint offset
 // ----------- //
 
 #define i2s_rx_data_wrap_target 0
-#define i2s_rx_data_wrap 15
+#define i2s_rx_data_wrap 2
 #define i2s_rx_data_pio_version 1
 
 static const uint16_t i2s_rx_data_program_instructions[] = {
             //     .wrap_target
-    0x2021, //  0: wait   0 pin, 1
-    0x2022, //  1: wait   0 pin, 2
-    0x20a2, //  2: wait   1 pin, 2
-    0xe03f, //  3: set    x, 31
-    0x2022, //  4: wait   0 pin, 2
-    0x20a2, //  5: wait   1 pin, 2
-    0x4001, //  6: in     pins, 1
-    0x0044, //  7: jmp    x--, 4
-    0x20a1, //  8: wait   1 pin, 1
-    0x2022, //  9: wait   0 pin, 2
-    0x20a2, // 10: wait   1 pin, 2
-    0xe03f, // 11: set    x, 31
-    0x2022, // 12: wait   0 pin, 2
-    0x20a2, // 13: wait   1 pin, 2
-    0x4001, // 14: in     pins, 1
-    0x004c, // 15: jmp    x--, 12
+    0x2022, //  0: wait   0 pin, 2
+    0x20a2, //  1: wait   1 pin, 2
+    0x4001, //  2: in     pins, 1
             //     .wrap
 };
 
 #if !PICO_NO_HARDWARE
 static const struct pio_program i2s_rx_data_program = {
     .instructions = i2s_rx_data_program_instructions,
-    .length = 16,
+    .length = 3,
     .origin = -1,
     .pio_version = i2s_rx_data_pio_version,
 #if PICO_PIO_VERSION > 0

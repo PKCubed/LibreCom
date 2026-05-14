@@ -22,7 +22,7 @@
 
 #define UART_ID uart0
 #define UART_RX_PIN 1
-#define UART_BAUD 115200
+#define UART_BAUD 4800
 
 #define I2S_DATA_PIN 8
 #define I2S_LRCK_PIN 9
@@ -36,15 +36,23 @@
 #define DMA_MONO_SAMPLES_PER_BLOCK 128
 #define DMA_WORDS_PER_BLOCK (DMA_MONO_SAMPLES_PER_BLOCK * 2)
 
+/* RX output gain multiplier (integer). Increase if output is too quiet. */
+#ifndef RX_OUTPUT_GAIN
+#define RX_OUTPUT_GAIN 2
+#endif
+
 #define FRAME_SYNC_0 0xA5
 #define FRAME_SYNC_1 0x5A
 
 #define UART_RING_SIZE 1024
 #define PCM_RING_SIZE 4096
 
-#ifndef CODEC2_MODE_1300
-#define CODEC2_MODE_1300 CODEC2_MODE_2400
+#ifndef CODEC2_MODE_2400
+#error "Codec2 2400 bps mode is required for the wire link."
 #endif
+
+/* Diagnostic LED pulse length (main loop ticks) */
+#define DIAG_LED_PULSE_TICKS 50
 
 static PIO pio_inst = pio0;
 static const uint sm_bck = 0;
@@ -63,6 +71,9 @@ static volatile uint16_t uart_ring_tail = 0;
 static int16_t pcm_ring[PCM_RING_SIZE];
 static uint16_t pcm_head = 0;
 static uint16_t pcm_tail = 0;
+static volatile int diag_led_pulse = 0;
+static volatile uint32_t frames_decoded = 0;
+static volatile uint32_t frames_crc_fail = 0;
 
 static float calc_div_for_square_wave(uint32_t target_hz) {
     const uint32_t sys_hz = clock_get_hz(clk_sys);
@@ -127,11 +138,21 @@ static void fill_dma_tx_buffer(uint8_t idx) {
         int16_t s = 0;
         (void)pcm_ring_pop(&s);
 
-        const uint32_t word = ((uint32_t)(uint16_t)s) << 16;
+        /* Apply integer gain with clipping to 16-bit range */
+        int32_t scaled = (int32_t)s * (int32_t)RX_OUTPUT_GAIN;
+        if (scaled > INT16_MAX) scaled = INT16_MAX;
+        if (scaled < INT16_MIN) scaled = INT16_MIN;
+
+        /* Sign-extend into 32-bit and left-justify the 16-bit sample into the MSBs */
+        int32_t word32 = (int32_t)scaled << 16;
+        const uint32_t word = (uint32_t)word32;
+
         dst[2 * i] = word;
         dst[(2 * i) + 1] = word;
     }
 }
+
+
 
 static void init_uart_rx(void) {
     uart_init(UART_ID, UART_BAUD);
@@ -143,6 +164,13 @@ static void init_uart_rx(void) {
     uart_set_irq_enables(UART_ID, true, false);
     irq_set_exclusive_handler(UART0_IRQ, uart0_rx_handler);
     irq_set_enabled(UART0_IRQ, true);
+}
+
+static void init_diag_led(void) {
+#ifdef PICO_DEFAULT_LED_PIN
+    gpio_init(PICO_DEFAULT_LED_PIN);
+    gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+#endif
 }
 
 static void init_bck_sm(uint offset) {
@@ -273,9 +301,21 @@ static void decode_uart_frames(struct CODEC2 *codec2, int16_t *decoded_pcm, int 
                 if (checksum_bytes(payload, expected_len) == b) {
                     codec2_decode(codec2, decoded_pcm, payload);
                     const int n = codec2_samples_per_frame(codec2);
+                    int64_t acc = 0;
                     for (int i = 0; i < n; ++i) {
                         (void)pcm_ring_push(decoded_pcm[i]);
+                        acc += (int64_t)decoded_pcm[i] * (int64_t)decoded_pcm[i];
                     }
+                    frames_decoded++;
+                    int64_t mean_sq = acc / (n > 0 ? n : 1);
+                    const int64_t energy_threshold = 1000; /* tuned empirically */
+                    if (mean_sq > energy_threshold) {
+                        diag_led_pulse = DIAG_LED_PULSE_TICKS;
+                    }
+                } else {
+                    frames_crc_fail++;
+                    /* long blink to indicate CRC failure */
+                    diag_led_pulse = DIAG_LED_PULSE_TICKS * 3;
                 }
                 state = RX_WAIT_SYNC0;
                 break;
@@ -290,7 +330,7 @@ static void decode_uart_frames(struct CODEC2 *codec2, int16_t *decoded_pcm, int 
 int main(void) {
     stdio_init_all();
 
-    struct CODEC2 *codec2 = codec2_create(CODEC2_MODE_1300);
+    struct CODEC2 *codec2 = codec2_create(CODEC2_MODE_2400);
     if (!codec2) {
         while (true) {
             tight_loop_contents();
@@ -326,6 +366,8 @@ int main(void) {
 
     init_i2s_tx_dma();
 
+    init_diag_led();
+
     while (true) {
         decode_uart_frames(codec2, decoded_pcm, bytes_per_frame);
 
@@ -338,6 +380,16 @@ int main(void) {
             tx_buffer_needs_fill[1] = false;
             fill_dma_tx_buffer(1);
         }
+
+        /* Diagnostic LED handling: pulse when diag_led_pulse > 0 */
+#ifdef PICO_DEFAULT_LED_PIN
+        if (diag_led_pulse > 0) {
+            gpio_put(PICO_DEFAULT_LED_PIN, 1);
+            diag_led_pulse--;
+        } else {
+            gpio_put(PICO_DEFAULT_LED_PIN, 0);
+        }
+#endif
 
         tight_loop_contents();
     }

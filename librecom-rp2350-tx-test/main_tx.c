@@ -22,7 +22,7 @@
 
 #define UART_ID uart0
 #define UART_TX_PIN 0
-#define UART_BAUD 115200
+#define UART_BAUD 4800
 
 #define I2S_DATA_PIN 8
 #define I2S_LRCK_PIN 9
@@ -40,8 +40,8 @@
 #define FRAME_SYNC_0 0xA5
 #define FRAME_SYNC_1 0x5A
 
-#ifndef CODEC2_MODE_1300
-#define CODEC2_MODE_1300 CODEC2_MODE_2400
+#ifndef CODEC2_MODE_2400
+#error "Codec2 2400 bps mode is required for the wire link."
 #endif
 
 static PIO pio_inst = pio0;
@@ -58,6 +58,52 @@ static volatile uint8_t dma_active_write_idx = 0;
 static float calc_div_for_square_wave(uint32_t target_hz) {
     const uint32_t sys_hz = clock_get_hz(clk_sys);
     return (float)sys_hz / (2.0f * (float)target_hz);
+}
+
+static void condition_pcm_frame(int16_t *frame, int samples) {
+    if (samples <= 0) {
+        return;
+    }
+
+    int64_t sum = 0;
+    for (int i = 0; i < samples; ++i) {
+        sum += frame[i];
+    }
+
+    const int32_t dc_offset = (int32_t)(sum / samples);
+
+    int32_t peak = 0;
+    for (int i = 0; i < samples; ++i) {
+        int32_t centered = (int32_t)frame[i] - dc_offset;
+        int32_t abs_centered = centered < 0 ? -centered : centered;
+        if (abs_centered > peak) {
+            peak = abs_centered;
+        }
+        frame[i] = (int16_t)centered;
+    }
+
+    if (peak == 0) {
+        return;
+    }
+
+    const int32_t target_peak = 12000;
+    int32_t gain_num = target_peak;
+    int32_t gain_den = peak;
+
+    if (peak > target_peak * 4) {
+        gain_num = 1;
+        gain_den = 4;
+    } else if (peak < target_peak / 2) {
+        gain_num = 2;
+        gain_den = 1;
+    }
+
+    for (int i = 0; i < samples; ++i) {
+        int32_t scaled = ((int32_t)frame[i] * gain_num) / gain_den;
+        if (scaled > INT16_MAX) scaled = INT16_MAX;
+        if (scaled < INT16_MIN) scaled = INT16_MIN;
+        frame[i] = (int16_t)scaled;
+    }
 }
 
 static void init_uart_tx(void) {
@@ -173,7 +219,7 @@ static void uart_send_frame(const uint8_t *payload, uint8_t len) {
 int main(void) {
     stdio_init_all();
 
-    struct CODEC2 *codec2 = codec2_create(CODEC2_MODE_1300);
+    struct CODEC2 *codec2 = codec2_create(CODEC2_MODE_2400);
     if (!codec2) {
         while (true) {
             tight_loop_contents();
@@ -239,21 +285,7 @@ int main(void) {
             pcm_frame[frame_pos++] = sample;
 
             if (frame_pos == samples_per_frame) {
-                /* Simple energy-based VAD: if frame is near-silence, encode a zeroed frame
-                   to avoid sending noisy garbage produced by ADC/read alignment issues. */
-                int64_t acc = 0;
-                for (int k = 0; k < samples_per_frame; ++k) {
-                    int32_t v = pcm_frame[k];
-                    acc += (int64_t)v * (int64_t)v;
-                }
-                int64_t mean_sq = acc / samples_per_frame;
-                const int32_t vad_threshold = 200; /* adjust experimentally */
-
-                if (mean_sq < (int64_t)vad_threshold * vad_threshold) {
-                    /* silence: zero the frame to reduce decoded noise */
-                    memset(pcm_frame, 0, samples_per_frame * sizeof(int16_t));
-                }
-
+                condition_pcm_frame(pcm_frame, samples_per_frame);
                 codec2_encode(codec2, compressed, pcm_frame);
                 uart_send_frame(compressed, (uint8_t)bytes_per_frame);
                 frame_pos = 0;

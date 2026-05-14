@@ -1,0 +1,91 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"external/codec2/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 270,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 386,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/codec2",
+			"exportName" : "codec2-config",
+			"exportTargets" : 
+			[
+				{
+					"id" : "codec2::@0a0b59305d10cca0eed4",
+					"index" : 18
+				}
+			],
+			"paths" : 
+			[
+				"codec2_external/src/CMakeFiles/Export/5bd4d45600a6b952779acd0bfa505c3f/codec2-config.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "lib",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"codec2_external/src/libcodec2.a"
+			],
+			"targetId" : "codec2::@0a0b59305d10cca0eed4",
+			"targetIndex" : 18,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "dev",
+			"destination" : "include/codec2",
+			"paths" : 
+			[
+				"external/codec2/src/codec2.h",
+				"external/codec2/src/codec2_fdmdv.h",
+				"external/codec2/src/codec2_cohpsk.h",
+				"external/codec2/src/codec2_fm.h",
+				"external/codec2/src/codec2_ofdm.h",
+				"external/codec2/src/fsk.h",
+				"external/codec2/src/codec2_fifo.h",
+				"external/codec2/src/comp.h",
+				"external/codec2/src/modem_stats.h",
+				"external/codec2/src/freedv_api.h",
+				"external/codec2/src/reliable_text.h",
+				"external/codec2/src/codec2_math.h",
+				"build/codec2_external/codec2/version.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "codec2_external/src",
+		"source" : "external/codec2/src"
+	}
+}

@@ -37,23 +37,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  16 .comment      00000045  00000000  00000000  00006298  2**0
                   CONTENTS, READONLY
- 17 .debug_info   0001df9d  00000000  00000000  000062dd  2**0
+ 17 .debug_info   0001df83  00000000  00000000  000062dd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_abbrev 00005594  00000000  00000000  0002427a  2**0
+ 18 .debug_abbrev 00005594  00000000  00000000  00024260  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_loclists 0000a61e  00000000  00000000  0002980e  2**0
+ 19 .debug_loclists 0000a61e  00000000  00000000  000297f4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_aranges 00000e28  00000000  00000000  00033e30  2**3
+ 20 .debug_aranges 00000e28  00000000  00000000  00033e18  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_rnglists 00000ebd  00000000  00000000  00034c58  2**0
+ 21 .debug_rnglists 00000ebd  00000000  00000000  00034c40  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line   0000eff8  00000000  00000000  00035b15  2**0
+ 22 .debug_line   0000eff8  00000000  00000000  00035afd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_str    000062ea  00000000  00000000  00044b0d  2**0
+ 23 .debug_str    000062ea  00000000  00000000  00044af5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_frame  00002380  00000000  00000000  0004adf8  2**2
+ 24 .debug_frame  00002380  00000000  00000000  0004ade0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_line_str 000002b7  00000000  00000000  0004d178  2**0
+ 25 .debug_line_str 000002b7  00000000  00000000  0004d160  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/audio_sine_tx.elf:     file format elf32-littlearm

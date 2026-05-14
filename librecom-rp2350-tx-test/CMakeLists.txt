@@ -164,8 +164,25 @@ function(add_audio_target target_name source_file)
     pico_add_extra_outputs(${target_name})
 endfunction()
 
+function(add_passthrough_target target_name source_file)
+    add_executable(${target_name} ${source_file})
+
+    pico_generate_pio_header(${target_name}
+        ${CMAKE_CURRENT_LIST_DIR}/i2s_audio.pio
+    )
+
+    target_include_directories(${target_name} PRIVATE ${AUDIO_COMMON_INCLUDES})
+    target_link_libraries(${target_name} PRIVATE ${AUDIO_COMMON_LIBS})
+
+    pico_enable_stdio_usb(${target_name} 0)
+    pico_enable_stdio_uart(${target_name} 0)
+    pico_add_extra_outputs(${target_name})
+endfunction()
+
 if(CODEC2_AVAILABLE)
     add_audio_target(audio_link_tx main_tx.c)
     add_audio_target(audio_link_rx main_rx.c)
 endif()
 add_audio_target(audio_sine_tx main_sine_tx.c)
+add_passthrough_target(audio_passthrough_tx main_passthrough_tx.c)
+add_passthrough_target(audio_passthrough_rx main_passthrough_rx.c)

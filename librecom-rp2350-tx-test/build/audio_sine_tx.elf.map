@@ -3565,6 +3565,7 @@ LOAD CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_stdio/stdi
 LOAD CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 LOAD CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 LOAD pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/./bs2_default_padded_checksummed.S.obj
+LOAD codec2_external/src/libcodec2.a
 LOAD C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp\libstdc++.a
 LOAD C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp\libm.a
 START GROUP
@@ -3694,37 +3695,37 @@ LOAD linker stubs
  .comment       0x00000045       0x46 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .comment       0x00000045       0x46 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 
-.debug_info     0x00000000    0x1df9d
- .debug_info    0x00000000     0x30f2 CMakeFiles/audio_sine_tx.dir/main_sine_tx.c.obj
- .debug_info    0x000030f2     0x1c5b CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x00004d4d      0x1b3 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
- .debug_info    0x00004f00      0x745 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/hardware_claim/claim.c.obj
- .debug_info    0x00005645      0x47d CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x00005ac2     0x152a CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
- .debug_info    0x00006fec     0x2427 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x00009413      0x1cf CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x000095e2     0x1f13 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x0000b4f5     0x3879 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x0000ed6e     0x1ea5 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x00010c13     0x167c CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0001228f      0x67c CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0001290b      0x2d6 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
- .debug_info    0x00012be1     0x1030 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00013c11      0x1d5 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
- .debug_info    0x00013de6      0x334 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
- .debug_info    0x0001411a      0x1b5 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x000142cf      0x1bc CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x0001448b     0x1c5d CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
- .debug_info    0x000160e8      0x7b0 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
- .debug_info    0x00016898       0x23 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.obj
- .debug_info    0x000168bb       0x23 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.obj
- .debug_info    0x000168de      0x2b8 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
- .debug_info    0x00016b96     0x1959 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x000184ef       0x23 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
- .debug_info    0x00018512      0xcab CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
- .debug_info    0x000191bd     0x146e CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x0001a62b      0xbe3 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
- .debug_info    0x0001b20e     0x2d8f CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.debug_info     0x00000000    0x1df83
+ .debug_info    0x00000000     0x30d8 CMakeFiles/audio_sine_tx.dir/main_sine_tx.c.obj
+ .debug_info    0x000030d8     0x1c5b CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x00004d33      0x1b3 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+ .debug_info    0x00004ee6      0x745 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/hardware_claim/claim.c.obj
+ .debug_info    0x0000562b      0x47d CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00005aa8     0x152a CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+ .debug_info    0x00006fd2     0x2427 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x000093f9      0x1cf CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x000095c8     0x1f13 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x0000b4db     0x3879 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000ed54     0x1ea5 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x00010bf9     0x167c CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x00012275      0x67c CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x000128f1      0x2d6 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+ .debug_info    0x00012bc7     0x1030 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00013bf7      0x1d5 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+ .debug_info    0x00013dcc      0x334 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+ .debug_info    0x00014100      0x1b5 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x000142b5      0x1bc CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x00014471     0x1c5d CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+ .debug_info    0x000160ce      0x7b0 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+ .debug_info    0x0001687e       0x23 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.obj
+ .debug_info    0x000168a1       0x23 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.obj
+ .debug_info    0x000168c4      0x2b8 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+ .debug_info    0x00016b7c     0x1959 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x000184d5       0x23 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+ .debug_info    0x000184f8      0xcab CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+ .debug_info    0x000191a3     0x146e CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x0001a611      0xbe3 CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+ .debug_info    0x0001b1f4     0x2d8f CMakeFiles/audio_sine_tx.dir/C_/dev/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 
 .debug_abbrev   0x00000000     0x5594
  .debug_abbrev  0x00000000      0x59c CMakeFiles/audio_sine_tx.dir/main_sine_tx.c.obj
