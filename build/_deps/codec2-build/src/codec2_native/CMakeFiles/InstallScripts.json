@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native/cmake_install.cmake",
+		"C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

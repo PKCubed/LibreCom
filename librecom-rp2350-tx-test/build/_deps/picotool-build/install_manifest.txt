@@ -1,6 +1,0 @@
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/_deps/picotool/picotool.exe
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/_deps/picotool/picotoolTargets.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/_deps/picotool/picotoolTargets-release.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/_deps/picotool/picotoolConfig.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/_deps/picotool/picotoolConfigVersion.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/_deps/picotool/enc_bootloader.elf

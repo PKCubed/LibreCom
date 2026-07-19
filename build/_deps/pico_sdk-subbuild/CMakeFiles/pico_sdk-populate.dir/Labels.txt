@@ -1,0 +1,14 @@
+# Target labels
+ pico_sdk-populate
+# Source files and their labels
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/pico_sdk-populate
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/pico_sdk-populate.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/pico_sdk-populate-complete.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-build.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-configure.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-download.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-install.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-mkdir.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-patch.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-test.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-update.rule

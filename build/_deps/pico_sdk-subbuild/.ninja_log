@@ -1,0 +1,21 @@
+# ninja log v6
+2	50	8061830648352612	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-mkdir	9b9b42ed66405441
+2	50	8061830648352612	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-mkdir	9b9b42ed66405441
+51	34230	8061830990159098	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-download	b7375a065b5fbebd
+51	34230	8061830990159098	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-download	b7375a065b5fbebd
+34231	36084	8061830990213288	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-update	3afa9d46aa69820c
+34231	36084	8061830990213288	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-update	3afa9d46aa69820c
+36084	36127	8061831009124054	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-patch	d26c55c0987a6616
+36084	36127	8061831009124054	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-patch	d26c55c0987a6616
+36127	36172	8061831009562337	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-configure	ac35c2fd66045e8f
+36127	36172	8061831009562337	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-configure	ac35c2fd66045e8f
+36172	36215	8061831010005108	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-build	ff0dc5c551c39b54
+36172	36215	8061831010005108	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-build	ff0dc5c551c39b54
+36215	36259	8061831010434286	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-install	95c9b166feface3f
+36215	36259	8061831010434286	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-install	95c9b166feface3f
+36259	36302	8061831010876043	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-test	4e0f54427ecf8708
+36259	36302	8061831010876043	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-test	4e0f54427ecf8708
+36302	36361	8061831011467704	CMakeFiles/pico_sdk-populate-complete	b9a7107f086a0896
+36302	36361	8061831011467704	pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-done	b9a7107f086a0896
+36302	36361	8061831011467704	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/pico_sdk-populate-complete	b9a7107f086a0896
+36302	36361	8061831011467704	C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/pico_sdk-populate-prefix/src/pico_sdk-populate-stamp/pico_sdk-populate-done	b9a7107f086a0896

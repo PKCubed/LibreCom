@@ -1,5 +1,0 @@
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2040-tx-test-2/build/pioasm-install/pioasm/pioasm.exe
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2040-tx-test-2/build/pioasm-install/pioasm/pioasmTargets.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2040-tx-test-2/build/pioasm-install/pioasm/pioasmTargets-release.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2040-tx-test-2/build/pioasm-install/pioasm/pioasmConfig.cmake
-C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2040-tx-test-2/build/pioasm-install/pioasm/pioasmConfigVersion.cmake

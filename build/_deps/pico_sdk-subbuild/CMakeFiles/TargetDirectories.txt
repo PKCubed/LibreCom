@@ -1,0 +1,3 @@
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/pico_sdk-populate.dir
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/pico_sdk-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,13 @@
+# Target labels
+ codec2_native
+# Source files and their labels
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/CMakeFiles/codec2_native
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/CMakeFiles/codec2_native.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/CMakeFiles/codec2_native-complete.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-build.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-configure.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-download.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-install.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-mkdir.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-patch.rule
+C:/Users/peter/Documents/GitHub/LibreCom/build/_deps/codec2-build/src/codec2_native-prefix/src/codec2_native-stamp/codec2_native-update.rule

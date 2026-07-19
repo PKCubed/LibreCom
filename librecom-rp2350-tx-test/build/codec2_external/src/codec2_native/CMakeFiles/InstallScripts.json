@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/cmake_install.cmake",
-		"C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/src/cmake_install.cmake",
-		"C:/Users/peter/Documents/GitHub/LibreCom/librecom-rp2350-tx-test/build/codec2_external/src/codec2_native/demo/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
