@@ -3674,10 +3674,10 @@
 		(uuid "0422f661-8cc6-4310-b86c-1a637e71bf4d")
 	)
 	(junction
-		(at 165.1 118.11)
+		(at 156.21 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "13452cab-50e5-4067-85c4-756a6b97dd1a")
+		(uuid "154b9f60-8bfa-4b55-bcf4-af8e8bdf274d")
 	)
 	(junction
 		(at 105.41 115.57)
@@ -3704,16 +3704,10 @@
 		(uuid "7017e1a8-e3e1-4eeb-b53b-674218eb9d66")
 	)
 	(junction
-		(at 156.21 118.11)
+		(at 166.37 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7bfb17cb-f7bf-45a0-9d67-c654b1bc62f7")
-	)
-	(junction
-		(at 153.67 120.65)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9651d5cb-08e3-4cd4-9f9a-9fabc2f68164")
+		(uuid "864ee14c-c0e6-424c-87ae-dacb700dcb0c")
 	)
 	(junction
 		(at 105.41 120.65)
@@ -3740,6 +3734,12 @@
 		(uuid "dc8636b9-4e1e-4ee3-b134-c09365c2d1d8")
 	)
 	(junction
+		(at 163.83 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e58444e6-4354-4058-9bab-fef8435180d6")
+	)
+	(junction
 		(at 120.65 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3758,6 +3758,16 @@
 			(type default)
 		)
 		(uuid "0160e39d-a729-4fc2-8c63-ee59216cc419")
+	)
+	(wire
+		(pts
+			(xy 166.37 115.57) (xy 166.37 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "055880ad-eb53-49b7-9e6d-92b8156e5cdb")
 	)
 	(wire
 		(pts
@@ -3821,6 +3831,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 128.27) (xy 229.87 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "394ac0c0-6142-46cc-a5ad-3339fd32168f")
+	)
+	(wire
+		(pts
 			(xy 149.86 118.11) (xy 156.21 118.11)
 		)
 		(stroke
@@ -3828,16 +3848,6 @@
 			(type default)
 		)
 		(uuid "3e51a258-29dd-45e4-bb22-f6ed5fc73d08")
-	)
-	(wire
-		(pts
-			(xy 156.21 118.11) (xy 157.48 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40877610-7ad5-4550-9d89-d47bd7b7ad57")
 	)
 	(wire
 		(pts
@@ -3911,16 +3921,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 115.57) (xy 153.67 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d90eaa5-d8b5-490d-92e2-fbb6ec6618dd")
-	)
-	(wire
-		(pts
 			(xy 227.33 106.68) (xy 199.39 106.68)
 		)
 		(stroke
@@ -3928,6 +3928,16 @@
 			(type default)
 		)
 		(uuid "5ed0aee8-fc62-45fe-8996-d90fd4bed75f")
+	)
+	(wire
+		(pts
+			(xy 167.64 115.57) (xy 166.37 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6006536d-93e7-4ea5-9c91-3327cd06d633")
 	)
 	(wire
 		(pts
@@ -3951,7 +3961,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 119.38) (xy 165.1 118.11)
+			(xy 163.83 119.38) (xy 163.83 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4021,6 +4031,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 118.11) (xy 167.64 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "953f1630-378d-4a8a-80c1-f1db54860719")
+	)
+	(wire
+		(pts
 			(xy 199.39 113.03) (xy 200.66 113.03)
 		)
 		(stroke
@@ -4061,7 +4081,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 128.27) (xy 229.87 128.27)
+			(xy 163.83 128.27) (xy 166.37 128.27)
 		)
 		(stroke
 			(width 0)
@@ -4098,16 +4118,6 @@
 			(type default)
 		)
 		(uuid "ac3be637-4f9f-4cbf-9e18-ea6c198ed7c9")
-	)
-	(wire
-		(pts
-			(xy 153.67 115.57) (xy 153.67 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afbf63fc-39b4-4099-8e85-f7d51f37f094")
 	)
 	(wire
 		(pts
@@ -4151,7 +4161,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 128.27) (xy 165.1 127)
+			(xy 163.83 128.27) (xy 163.83 127)
 		)
 		(stroke
 			(width 0)
@@ -4198,16 +4208,6 @@
 			(type default)
 		)
 		(uuid "e3ea15e9-3425-4d69-a339-b9a235712003")
-	)
-	(wire
-		(pts
-			(xy 165.1 118.11) (xy 167.64 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef0355c2-ca83-4ef6-86a0-5ad1052abe80")
 	)
 	(wire
 		(pts
@@ -8636,7 +8636,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Resistors:0402,100Ω")
-		(at 161.29 118.11 90)
+		(at 160.02 118.11 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8647,7 +8647,7 @@
 		(fields_autoplaced yes)
 		(uuid "658ebc0f-2b2f-4d93-833c-666e3c1ec8bd")
 		(property "Reference" "R3"
-			(at 161.29 114.3 90)
+			(at 160.02 114.3 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8657,7 +8657,7 @@
 			)
 		)
 		(property "Value" "100Ω"
-			(at 161.29 118.11 90)
+			(at 160.02 118.11 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -8667,7 +8667,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:R_0402"
-			(at 161.29 119.888 90)
+			(at 160.02 119.888 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8678,7 +8678,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-0402WGF1000TCE_C25076.pdf"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8689,7 +8689,7 @@
 			)
 		)
 		(property "Description" "62.5mW Thick Film Resistors 50V ±1% ±200ppm/°C 100Ω 0402 Chip Resistor - Surface Mount ROHS"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8700,7 +8700,7 @@
 			)
 		)
 		(property "LCSC" "C25076"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8711,7 +8711,7 @@
 			)
 		)
 		(property "Stock" "5907585"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8722,7 +8722,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8733,7 +8733,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8744,7 +8744,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8755,7 +8755,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8766,7 +8766,7 @@
 			)
 		)
 		(property "Class" "Basic Component"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8777,7 +8777,7 @@
 			)
 		)
 		(property "Category" "Resistors,Chip Resistor - Surface Mount"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8788,7 +8788,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8799,7 +8799,7 @@
 			)
 		)
 		(property "Part" "0402WGF1000TCE"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8810,7 +8810,7 @@
 			)
 		)
 		(property "Resistance" "100Ω"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8821,7 +8821,7 @@
 			)
 		)
 		(property "Power(Watts)" "62.5mW"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8832,7 +8832,7 @@
 			)
 		)
 		(property "Type" "Thick Film Resistors"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8843,7 +8843,7 @@
 			)
 		)
 		(property "Overload Voltage (Max)" "50V"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8854,7 +8854,7 @@
 			)
 		)
 		(property "Operating Temperature Range" "-55°C~+155°C"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8865,7 +8865,7 @@
 			)
 		)
 		(property "Tolerance" "±1%"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8876,7 +8876,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "±200ppm/°C"
-			(at 161.29 118.11 0)
+			(at 160.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8980,7 +8980,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0402,100nF")
-		(at 165.1 123.19 0)
+		(at 163.83 123.19 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8990,7 +8990,7 @@
 		(dnp no)
 		(uuid "a17f4435-9a87-4663-91e4-9a888e3dfaf6")
 		(property "Reference" "C1"
-			(at 162.052 121.412 0)
+			(at 160.782 121.412 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9001,7 +9001,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 159.766 123.19 0)
+			(at 158.496 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9012,7 +9012,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:C_0402"
-			(at 163.322 123.19 90)
+			(at 162.052 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9023,7 +9023,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KO5NNNC_C1525.pdf"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9034,7 +9034,7 @@
 			)
 		)
 		(property "Description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9045,7 +9045,7 @@
 			)
 		)
 		(property "LCSC" "C1525"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9056,7 +9056,7 @@
 			)
 		)
 		(property "Stock" "20208285"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9067,7 +9067,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9078,7 +9078,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9089,7 +9089,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9100,7 +9100,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9111,7 +9111,7 @@
 			)
 		)
 		(property "Class" "Basic Component"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9122,7 +9122,7 @@
 			)
 		)
 		(property "Category" "Capacitors,Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9133,7 +9133,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9144,7 +9144,7 @@
 			)
 		)
 		(property "Part" "CL05B104KO5NNNC"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9155,7 +9155,7 @@
 			)
 		)
 		(property "Voltage Rated" "16V"
-			(at 162.306 124.714 0)
+			(at 161.036 124.714 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9166,7 +9166,7 @@
 			)
 		)
 		(property "Tolerance" "±10%"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9177,7 +9177,7 @@
 			)
 		)
 		(property "Capacitance" "100nF"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9188,7 +9188,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X7R"
-			(at 165.1 123.19 0)
+			(at 163.83 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
