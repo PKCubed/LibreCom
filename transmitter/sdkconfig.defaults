@@ -1,1 +1,9 @@
 CONFIG_IDF_TARGET="esp32s3"
+
+# Codec 2 is the only real load on this chip and it has to keep up with a
+# 20 ms frame clock. -Og at 160 MHz does not leave enough headroom.
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# 1 ms ticks so the 20 ms audio cadence lands on a tick boundary.
+CONFIG_FREERTOS_HZ=1000
