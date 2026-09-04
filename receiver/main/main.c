@@ -1,5 +1,5 @@
 ﻿/*
- * LibreCom receiver: framed UART -> Codec 2 -> PCM5102A I2S DAC.
+ * LibreCom receiver: framed UART -> Opus -> PCM5102A I2S DAC.
  *
  * The two boards run off separate crystals, so the sender produces samples at
  * a slightly different rate than this board consumes them. A jitter buffer
@@ -22,7 +22,7 @@
 #include "esp_timer.h"
 #include "esp_heap_caps.h"
 
-#include "codec2.h"
+#include "opus.h"
 #include "audio_link.h"
 #include "link_config.h"
 
@@ -42,6 +42,26 @@
  * the fault is the transmitter or the cable. If the loopback also gives
  * bytes=0, the problem is on this board. */
 #define RX_UART_LOOPBACK 0
+
+/* Frequency of the locally generated tone used by RX_LOCAL_TONE and by the
+ * loopback generator. Sweep this to measure the DAC and analogue output
+ * response: at 8 kHz everything up to about 3.6 kHz should come out at the
+ * same loudness. A tone that gets quiet well below that means the output
+ * stage, not the codec, is what sounds muffled. */
+#define RX_TONE_HZ       440      /* integer Hz, so the guard below can test it */
+
+/* 1 = step automatically through a list of frequencies, about two seconds
+ * each, logging every step. One flash measures the whole response, instead of
+ * reflashing once per frequency. 0 = hold RX_TONE_HZ. */
+#define RX_TONE_SWEEP    1
+
+/* Neither of the above is compiled in unless a tone mode is active, so
+ * changing them would otherwise do nothing at all and say nothing about it.
+ * Only complain when the value has actually been changed, so a normal build
+ * stays quiet. */
+#if !RX_LOCAL_TONE && !RX_UART_LOOPBACK && (RX_TONE_HZ != 440)
+#  warning "RX_TONE_HZ has no effect here - set RX_LOCAL_TONE to 1 to hear a tone"
+#endif
 
 /* Jitter buffer depth. Bigger = more robust against hiccups, more latency. */
 #define JB_TARGET_MS     60      /* level we prebuffer to before playing out */
@@ -69,11 +89,11 @@
 
 static const char *TAG = "rx";
 
-#define RING_SAMPLES     8192    /* power of two, ~1 s at 8 kHz */
+#define RING_SAMPLES     16384   /* power of two, ~1 s at 16 kHz */
 #define JB_TARGET        (LINK_SAMPLE_RATE * JB_TARGET_MS / 1000)
 #define JB_HIGH          (LINK_SAMPLE_RATE * JB_HIGH_MS   / 1000)
 
-_Static_assert(LINK_PAYLOAD_LEN <= LINK_MAX_PAYLOAD, "payload too large for audio_link");
+_Static_assert(LINK_PAYLOAD_MAX <= LINK_MAX_PAYLOAD, "payload too large for audio_link");
 _Static_assert(JB_HIGH < RING_SAMPLES - LINK_FRAME_SAMPLES, "jitter buffer will not fit");
 
 static i2s_chan_handle_t s_tx_chan;
@@ -122,8 +142,10 @@ static volatile uint32_t st_dec_max_us;
 static volatile uint32_t st_decoded;
 static volatile uint32_t st_rx_bytes;   /* raw bytes off the wire, per second */
 static volatile uint32_t st_rxq_max;    /* peak UART driver backlog           */
+#if !RX_LOCAL_TONE
 static uint8_t  st_peek[16];            /* first raw bytes, when nothing syncs */
 static volatile uint32_t st_peek_len;
+#endif
 #if !RX_LOCAL_TONE
 static link_parser_t     s_parser;
 #endif
@@ -197,6 +219,9 @@ static void init_uart(void)
  *  Decoder: UART bytes -> PCM in the ring
  * ------------------------------------------------------------------ */
 #if !RX_LOCAL_TONE
+#if !LINK_SEND_PCM
+static OpusDecoder *s_dec;              /* also drives packet loss concealment */
+#endif
 static int16_t s_last_frame[LINK_FRAME_SAMPLES];   /* for gap concealment */
 static bool    s_have_last;
 
@@ -209,85 +234,46 @@ static void push_frame(const int16_t *pcm)
      * the I2S task is about to trim it, so dropping here is the right move. */
 }
 
+/* Fill a detected gap. Opus has real packet loss concealment built in -
+ * calling opus_decode() with a NULL packet extrapolates from the decoder's
+ * own state, which sounds far better than the attenuated repeat we used with
+ * Codec 2 (which had no PLC of its own). */
 static void conceal(int frames)
 {
-    if (!s_have_last) {
-        return;
-    }
     static int16_t tmp[LINK_FRAME_SAMPLES];
-    float gain = 0.6f;
     for (int f = 0; f < frames && f < PLC_MAX_FRAMES; f++) {
+#if LINK_SEND_PCM
+        if (!s_have_last) return;
         for (int i = 0; i < LINK_FRAME_SAMPLES; i++) {
-            tmp[i] = (int16_t)((float)s_last_frame[i] * gain);
+            tmp[i] = (int16_t)((float)s_last_frame[i] * 0.6f);
         }
+#else
+        if (opus_decode(s_dec, NULL, 0, tmp, LINK_FRAME_SAMPLES, 0) != LINK_FRAME_SAMPLES) {
+            return;
+        }
+#endif
         push_frame(tmp);
         st_concealed++;
-        gain *= 0.6f;
     }
 }
-
-#if RX_UART_LOOPBACK
-/* Feeds the internal loopback with frames this board builds itself, at the
- * real 20 ms cadence. In the PCM modes this is a genuine 440 Hz tone, so a
- * working loopback sounds exactly like stage 0. In Codec 2 mode the payload is
- * a fixed pattern and the audio is meaningless - watch good= and crc= instead. */
-static void loop_tx_task(void *arg)
-{
-    (void)arg;
-    static uint8_t payload[LINK_PAYLOAD_LEN];
-    uint8_t frame[LINK_FRAME_LEN(LINK_PAYLOAD_LEN)];
-    uint8_t seq = 0;
-    TickType_t next = xTaskGetTickCount();
-#if LINK_SEND_PCM
-    static int16_t tone[LINK_FRAME_SAMPLES];
-    float phase = 0.0f;
-    const float inc = 2.0f * (float)M_PI * 440.0f / (float)LINK_SAMPLE_RATE;
-#endif
-
-    while (1) {
-#if LINK_SEND_PCM
-        for (int i = 0; i < LINK_FRAME_SAMPLES; i++) {
-            tone[i] = (int16_t)(12000.0f * sinf(phase));
-            phase += inc;
-            if (phase >= 2.0f * (float)M_PI) phase -= 2.0f * (float)M_PI;
-        }
-#  if LINK_PCM_ULAW
-        for (int i = 0; i < LINK_FRAME_SAMPLES; i++) payload[i] = link_ulaw_encode(tone[i]);
-#  else
-        memcpy(payload, tone, sizeof(payload));
-#  endif
-#else
-        for (int i = 0; i < LINK_PAYLOAD_LEN; i++) payload[i] = (uint8_t)(0x5A + i);
-#endif
-        link_build_frame(frame, seq++, payload, LINK_PAYLOAD_LEN);
-        uart_write_bytes(UART_PORT, (const char *)frame, sizeof(frame));
-        vTaskDelayUntil(&next, pdMS_TO_TICKS(LINK_FRAME_MS));
-    }
-}
-#endif /* RX_UART_LOOPBACK */
 
 static void net_task(void *arg)
 {
     (void)arg;
 
 #if !LINK_SEND_PCM
-    struct CODEC2 *c2 = codec2_create(CODEC2_MODE_3200);
-    if (!c2) {
-        ESP_LOGE(TAG, "codec2_create failed (out of heap?) - stopping");
+    int oerr = 0;
+    s_dec = opus_decoder_create(LINK_SAMPLE_RATE, 1, &oerr);
+    if (!s_dec || oerr != OPUS_OK) {
+        ESP_LOGE(TAG, "opus_decoder_create failed: %s - stopping", opus_strerror(oerr));
         vTaskDelete(NULL);
         return;
     }
-    int spf = codec2_samples_per_frame(c2);
-    int bpf = (codec2_bits_per_frame(c2) + 7) / 8;
-    ESP_LOGI(TAG, "Codec 2 mode 3200: %d samples/frame, %d bytes/frame", spf, bpf);
-    if (spf != LINK_FRAME_SAMPLES || bpf != LINK_C2_BYTES) {
-        ESP_LOGE(TAG, "link_config.h disagrees with Codec 2 (%d/%d) - stopping", spf, bpf);
-        vTaskDelete(NULL);
-        return;
-    }
+    ESP_LOGI(TAG, "Opus %s: %d Hz, %d ms frames",
+             opus_get_version_string(), LINK_SAMPLE_RATE, LINK_FRAME_MS);
 #endif
 
-    link_parser_init(&s_parser, LINK_PAYLOAD_LEN);
+    link_parser_init(&s_parser, LINK_PAYLOAD_MAX);
 
     static uint8_t rxbuf[512];
     static int16_t pcm[LINK_FRAME_SAMPLES];
@@ -340,7 +326,12 @@ static void net_task(void *arg)
             memcpy(pcm, s_parser.payload, LINK_FRAME_SAMPLES * sizeof(int16_t));
 #  endif
 #else
-            codec2_decode(c2, pcm, s_parser.payload);
+            int got = opus_decode(s_dec, s_parser.payload, s_parser.payload_len,
+                                  pcm, LINK_FRAME_SAMPLES, 0);
+            if (got != LINK_FRAME_SAMPLES) {
+                ESP_LOGW(TAG, "opus_decode returned %d", got);
+                memset(pcm, 0, sizeof(pcm));
+            }
 #endif
             uint32_t dt = (uint32_t)(esp_timer_get_time() - t0);
             st_dec_total_us += dt;
@@ -371,8 +362,21 @@ static void dac_task(void *arg)
 
 #if RX_LOCAL_TONE
     float phase = 0.0f;
-    const float inc = 2.0f * (float)M_PI * 440.0f / (float)LINK_SAMPLE_RATE;
-    ESP_LOGI(TAG, "RX_LOCAL_TONE: playing a local 440 Hz tone, UART ignored");
+#if RX_TONE_SWEEP
+    /* Chosen to straddle the 8 kHz band: everything here should come out at
+     * about the same loudness. Where it starts fading is your real bandwidth. */
+    static const float sweep_hz[] = { 300, 500, 800, 1200, 1600, 2000, 2500, 3000, 3400 };
+    const int   n_sweep         = sizeof(sweep_hz) / sizeof(sweep_hz[0]);
+    const int   frames_per_step = 2000 / LINK_FRAME_MS;      /* ~2 s per tone */
+    int   sweep_i = 0, sweep_frames = 0;
+    float inc = 2.0f * (float)M_PI * sweep_hz[0] / (float)LINK_SAMPLE_RATE;
+    ESP_LOGI(TAG, "RX_LOCAL_TONE: sweeping %d tones, %d ms each, UART ignored",
+             n_sweep, 2000);
+    ESP_LOGI(TAG, "  playing %d Hz", (int)sweep_hz[0]);
+#else
+    const float inc = 2.0f * (float)M_PI * (float)RX_TONE_HZ / (float)LINK_SAMPLE_RATE;
+    ESP_LOGI(TAG, "RX_LOCAL_TONE: playing a local %d Hz tone, UART ignored", RX_TONE_HZ);
+#endif
 #else
     ESP_LOGI(TAG, "jitter buffer: target %d ms, drop above %d ms",
              JB_TARGET_MS, JB_HIGH_MS);
@@ -382,6 +386,14 @@ static void dac_task(void *arg)
 
     while (1) {
 #if RX_LOCAL_TONE
+#if RX_TONE_SWEEP
+        if (++sweep_frames >= frames_per_step) {
+            sweep_frames = 0;
+            sweep_i = (sweep_i + 1) % n_sweep;
+            inc = 2.0f * (float)M_PI * sweep_hz[sweep_i] / (float)LINK_SAMPLE_RATE;
+            ESP_LOGI(TAG, "  playing %d Hz", (int)sweep_hz[sweep_i]);
+        }
+#endif
         for (int i = 0; i < LINK_FRAME_SAMPLES; i++) {
             block[i] = (int16_t)(12000.0f * sinf(phase));
             phase += inc;
@@ -480,7 +492,7 @@ void app_main(void)
     ESP_LOGI(TAG, "LibreCom receiver starting");
     ESP_LOGI(TAG, "expecting %s, %d byte payload, %d frames/s, %d bytes/s at %d baud",
              LINK_SEND_PCM ? (LINK_PCM_ULAW ? "mu-law PCM" : "16-bit PCM") : "Codec 2",
-             LINK_PAYLOAD_LEN, LINK_FRAMES_PER_SEC,
+             LINK_PAYLOAD_MAX, LINK_FRAMES_PER_SEC,
              LINK_WIRE_BYTES_PER_SEC, LINK_UART_BAUD);
     init_i2s();
 #if !RX_LOCAL_TONE
@@ -488,7 +500,9 @@ void app_main(void)
     /* Both audio tasks on core 1: the FPU state Codec 2 uses does not migrate
      * between Xtensa cores, and keeping them on one core makes the lock-free
      * ring between them safe by construction. */
-    xTaskCreatePinnedToCore(net_task, "net", 24 * 1024, NULL, 6, NULL, 1);
+    /* 32 KB: Opus takes its scratch from the stack (VAR_ARRAYS) and the
+     * benchmark measured an 18 KB high-water mark at this configuration. */
+    xTaskCreatePinnedToCore(net_task, "net", 32 * 1024, NULL, 6, NULL, 1);
 #if RX_UART_LOOPBACK
     xTaskCreatePinnedToCore(loop_tx_task, "looptx", 4 * 1024, NULL, 5, NULL, 1);
 #endif

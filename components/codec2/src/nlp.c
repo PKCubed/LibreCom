@@ -51,7 +51,13 @@
 #define PI          3.141592654	/* mathematical constant                */
 #define T           0.1         /* threshold for local minima candidate */
 #define F0_MAX      500
+/* LOCAL MODIFICATION (see ../VENDORED.md): make the sub-multiple threshold
+   tunable. Lower values make the estimator readier to accept the lower
+   sub-multiple, which suppresses octave-up errors (the "voice cracks up a
+   register" artifact) at the risk of halving genuinely high pitches. */
+#ifndef CNLP
 #define CNLP        0.3	        /* post processor constant              */
+#endif
 #define NLP_NTAP 48	        /* Decimation LPF order */
 
 /* 8 to 16 kHz sample rate conversion */

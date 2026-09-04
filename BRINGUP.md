@@ -1,7 +1,10 @@
 # LibreCom bring-up
 
-Audio path: PCM1808 → I2S → Codec 2 (mode 3200) → framed UART → Codec 2 decode
-→ I2S → PCM5102A.
+Audio path: PCM1808 → I2S → Opus → framed UART → Opus decode → I2S → PCM5102A.
+
+Opus at 16 kHz / 24 kbps replaced Codec 2 at 8 kHz / 3.2 kbps. The Codec 2
+component is still vendored and documented here for the eventual low-bitrate
+radio path, but it is not what the boards run.
 
 ## Wiring
 
@@ -276,6 +279,208 @@ A `drop` or `under` every several minutes is normal and expected — the two
 crystals are not identical and something has to give. A steady stream of either
 means a real rate mismatch, not drift.
 
+## Audio quality
+
+The link now runs **Opus at 16 kHz, 24 kbps, complexity 1, 20 ms frames**.
+The Codec 2 material further down is kept for the low-bitrate radio path; it is
+not what the boards are running.
+
+### Opus silently drops to narrowband below ~14 kbps
+
+This one cost a full debugging round. Opus chooses its own bandwidth from the
+bitrate, and **below roughly 14 kbps it encodes narrowband 4 kHz** - exactly as
+band-limited as Codec 2 was. Feeding it 16 kHz audio buys nothing at all, and
+nothing in the output says so.
+
+Measured on the host against this project's own libopus build, complexity 1,
+CBR:
+
+| bitrate | chosen bandwidth |
+|---|---|
+| 12 kbps | narrowband 4 kHz |
+| 14 kbps | wideband 8 kHz |
+| 16 kbps | wideband 8 kHz |
+| 24 kbps (shipping) | wideband 8 kHz |
+
+Complexity is part of the decision: Opus scales its internal equivalent rate by
+`(90 + complexity)/100`, so the low complexity that makes wideband affordable on
+this chip is also what pushes the rate under the threshold. 12 kbps at
+complexity 5 does select wideband - at 77% of the frame budget instead of 34%.
+
+The transmitter now prints the bandwidth Opus actually chose once a second, and
+**warns** if it is below wideband:
+
+```
+tx: opus is encoding at wideband 8 kHz
+tx: opus dropped to narrowband 4 kHz - raise LINK_OPUS_BITRATE or it will sound muffled
+```
+
+Bitrate is nearly free here: 24 kbps is under a third of the UART, and 60 bytes
+per frame. There is room to go higher still if you ever want it.
+
+### CPU budget
+
+Measured on hardware at 240 MHz, per 20 ms frame:
+
+| | encode | decode |
+|---|---|---|
+| complexity 0 | 34% | 7% |
+| complexity 1 (shipping) | 34% | 7% |
+| complexity 3 | 77% | 8% |
+| complexity 5 | 105% - slower than real time | 8% |
+
+The cliff between complexity 1 and 3 is SILK switching to its delayed-decision
+quantiser. Sample rate barely matters below that cliff: 16 kHz costs 6809 us
+against 8 kHz's 6534 us. **Wideband is close to free; complexity is what
+costs.** Re-run `TX_OPUS_BENCH 1` after changing bitrate, complexity or frame
+size.
+
+Opus takes its scratch from the stack (VAR_ARRAYS), measured at an 18 KB high
+water mark, which is why the audio tasks are 32 KB rather than the 24 KB Codec 2
+needed.
+
+### Measuring where the audio actually stops
+
+`TX_SPECTRUM 1` prints a Goertzel band meter on the captured audio, before the
+encoder, as dB below the loudest band:
+
+```
+tx: input spectrum (dB below loudest) 250:0dB 500:-3dB 1000:-17dB 2000:-24dB 3000:-28dB 4000:-31dB 5000:-32dB 6500:-33dB
+```
+
+Read the *shape*, not the slope. Speech naturally falls at roughly 6-12 dB per
+octave, so a steady decline is normal. What indicates a band limit is a
+**cliff** - a 30 dB drop between adjacent bands with everything above it flat.
+The reading above has only 2 dB between 4000 and 6500, so that input was not
+band-limited; the codec was.
+
+
+
+Codec 2 mode 3200 is the **highest** quality mode Codec 2 offers. Every other
+mode (2400, 1600, 1400, 1300, 1200, 700C, 450) is lower bitrate and worse, so
+there is nothing to trade up to within the codec.
+
+### The pitch ceiling
+
+Codec 2 models pitch over **50-400 Hz** and `encode_Wo()` clamps anything above
+that onto the top quantiser index, so a 450 Hz voice decodes as 397 Hz - not
+merely detuned, but rebuilt on the wrong fundamental.
+`components/codec2/test/run_pitch_test.sh` shows this.
+
+`CODEC2_PITCH_MAX_HZ` in `components/codec2/CMakeLists.txt` can raise it. We
+tried 500 Hz and **reverted to the stock 400**, because:
+
+- it did not fix the symptom we were chasing;
+- widening costs pitch resolution for everyone (2.73 Hz step becomes 3.52 Hz);
+- it arguably makes octave errors *worse*, since 2*F0 for a 210-250 Hz speaker
+  then falls inside the searchable range;
+- it breaks bitstream compatibility with standard Codec 2 and FreeDV.
+
+Raise it only if you genuinely have speakers above 400 Hz. It must match on
+every board; both firmwares print `Codec 2 pitch model: 50 - N Hz` at boot.
+
+### Voice cracking up a register
+
+If the decoded voice jumps up an octave for a frame or two, that is an **octave
+error**: the estimator picked 2*F0, so that 20 ms frame is resynthesised an
+octave high. It is the most common Codec 2 artifact and it is a property of the
+estimator, not of our link - `crc`, `lost` and `plc` will all read zero.
+
+The transmitter reports the pitch it actually estimated:
+
+```
+... | f0 avg=118 min=95 max=241 jump=4/38 | ...
+```
+
+`jump` is frame-to-frame pitch changes near a factor of two, over the number of
+frames loud enough to count. Frames below `TX_PITCH_GATE_RMS` are pauses
+between words, where the estimate is meaningless; they are excluded, and the
+previous pitch is forgotten across a gap so a pause never invents a jump.
+
+A tell that the gate is set too low: `min` reading exactly **50 Hz**, which is
+the floor of the pitch range. That is the estimator pinning on silence, not
+your voice.
+
+`avg` is also a useful number in its own right - it is your actual speaking
+range, which is what tells you whether the pitch ceiling is even relevant.
+
+### Tuning it
+
+The knob is `CODEC2_CNLP` in `components/codec2/CMakeLists.txt` - the threshold
+at which `post_process_sub_multiples()` accepts the lower sub-multiple.
+Upstream is 0.30. Lowering it makes the estimator readier to take the lower,
+usually correct, octave; too low and genuinely high pitches get halved instead,
+which sounds gravelly.
+
+`nlp()` runs in the encoder only and does not change the bitstream format, so
+**a CNLP change needs the transmitter reflashed but not the receiver.** That
+makes A/B testing quick.
+
+Suggested procedure: record the gated `jump` rate at 0.30 while reading the
+same passage, then repeat at 0.20 and 0.15. Take the highest value that removes
+the cracking, and listen for the opposite artifact on high notes.
+
+This has to be tuned on hardware. The synthetic harness reports 0% at every
+CNLP from 0.30 down to 0.05, so it cannot guide the choice - see below.
+
+`components/codec2/test/octave_errors.c` is a **guardrail, not a reproducer.**
+It reports 0% on synthetic voiced signals even with the fundamental 30 dB down,
+and 0% at every CNLP from 0.30 to 0.05, because NLP squares its input and so
+regenerates F0 regardless of how weak the fundamental is. It is useful only to
+confirm a change has not broken the easy cases. Real tuning happens on the
+bench against the `jump` counter.
+
+### If the output sounds muffled
+
+Reference Codec 2 3200 samples are also 8 kHz, so if yours sound duller than
+they do, something is rolling off *inside* the 0-4 kHz band. Codec 2 is rarely
+the culprit - check by running stage 1 (mu-law PCM), which takes the codec out
+of the path entirely. If it is still muffled there, the codec was never the
+problem.
+
+Two measurements isolate which end. Both need a tone generator; any phone app
+or web tone page will do.
+
+**Output path.** Set `RX_LOCAL_TONE 1` in `receiver/main/main.c` and flash the
+receiver **once**. With `RX_TONE_SWEEP 1` (the default) it steps through 300,
+500, 800, 1200, 1600, 2000, 2500, 3000 and 3400 Hz, two seconds each, on a
+loop, printing each one as it starts:
+
+```
+rx: RX_LOCAL_TONE: sweeping 9 tones, 2000 ms each, UART ignored
+rx:   playing 300 Hz
+rx:   playing 500 Hz
+```
+
+Listen for where it starts getting quieter and read the frequency off the log.
+Everything to about 3.4 kHz should be roughly equally loud. If it fades well
+before that, the DAC board, its output filter, or your speaker is the limit -
+not the codec.
+
+Set `RX_TONE_SWEEP 0` to hold a single `RX_TONE_HZ` instead.
+
+> `RX_TONE_HZ` and `RX_TONE_SWEEP` only exist when `RX_LOCAL_TONE` (or
+> `RX_UART_LOOPBACK`) is 1 - otherwise the tone generator is not compiled in
+> and changing the frequency does nothing at all. The build now emits a
+> `#warning` saying so, rather than failing silently.
+
+**Input path.** Leave the link running in stage 1 and play the same tones into
+the ADC at a constant level, watching `peak` on the transmitter. `peak` should
+stay roughly constant across the sweep. If it falls away above 1-2 kHz, the
+problem is the ADC input stage.
+
+**Also check what you are listening on.** Comparing reference samples on
+headphones against your board driving a small speaker will show exactly this
+difference, and no amount of firmware will fix it. Feed both through the same
+speaker before concluding anything.
+
+### What the codec cannot fix
+
+The muffled high end is the **8 kHz sample rate**, not the codec. Nyquist is
+4 kHz and the PCM1808 decimation filter rolls off near 3.6 kHz, so you are
+hearing telephone bandwidth. Codec 2 mode 3200 requires 8 kHz, so the only way
+past it is a different codec at a higher sample rate.
+
 ## Knobs, if a stage misbehaves
 
 In `transmitter/main/main.c`:
@@ -295,6 +500,13 @@ In `receiver/main/main.c`:
 
 - `JB_TARGET_MS` — raise it if you see underruns, lower it for less latency.
 - `RX_UART_LOOPBACK` — bypass the cable to test this board on its own.
+- `RX_TONE_SWEEP` / `RX_TONE_HZ` — output-bandwidth sweep. Only active when
+  `RX_LOCAL_TONE` or `RX_UART_LOOPBACK` is 1.
+
+In `components/codec2/CMakeLists.txt`:
+
+- `CODEC2_PITCH_MAX_HZ` — highest modelled fundamental. 500 here, 400 for
+  stock Codec 2 compatibility. Must match on both boards.
 
 In `link_config.h`:
 

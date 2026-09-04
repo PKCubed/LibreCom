@@ -7,6 +7,8 @@ enum {
     ST_SYNC0 = 0,
     ST_SYNC1,
     ST_SEQ,
+    ST_LEN_HI,
+    ST_LEN_LO,
     ST_PAYLOAD,
     ST_CRC,
 };
@@ -72,15 +74,18 @@ size_t link_build_frame(uint8_t *out, uint8_t seq,
     out[0] = LINK_SYNC0;
     out[1] = LINK_SYNC1;
     out[2] = seq;
-    memcpy(&out[3], payload, payload_len);
-    out[3 + payload_len] = link_crc8(&out[2], payload_len + 1);
+    out[3] = (uint8_t)(payload_len >> 8);
+    out[4] = (uint8_t)(payload_len & 0xFF);
+    memcpy(&out[5], payload, payload_len);
+    /* CRC over seq + len + payload, i.e. everything after the sync word. */
+    out[5 + payload_len] = link_crc8(&out[2], payload_len + 3);
     return LINK_FRAME_LEN(payload_len);
 }
 
-void link_parser_init(link_parser_t *p, uint16_t payload_len)
+void link_parser_init(link_parser_t *p, uint16_t max_payload)
 {
     memset(p, 0, sizeof(*p));
-    p->payload_len = payload_len;
+    p->max_payload = max_payload > LINK_MAX_PAYLOAD ? LINK_MAX_PAYLOAD : max_payload;
     p->state = ST_SYNC0;
 }
 
@@ -106,8 +111,29 @@ bool link_parser_feed(link_parser_t *p, uint8_t b)
     case ST_SEQ:
         p->seq   = b;
         p->crc   = link_crc8_update(0x00, b);
-        p->idx   = 0;
-        p->state = (p->payload_len > 0) ? ST_PAYLOAD : ST_CRC;
+        p->state = ST_LEN_HI;
+        break;
+
+    case ST_LEN_HI:
+        p->payload_len = (uint16_t)b << 8;
+        p->crc = link_crc8_update(p->crc, b);
+        p->state = ST_LEN_LO;
+        break;
+
+    case ST_LEN_LO:
+        /* A length we could never have sent means this was not a real frame
+         * start - almost certainly the sync word appearing inside a payload.
+         * Drop it and hunt again rather than swallowing max_payload bytes. */
+        p->payload_len |= b;
+        if (p->payload_len == 0 || p->payload_len > p->max_payload) {
+            p->n_badlen++;
+            p->n_resync++;
+            p->state = ST_SYNC0;
+            break;
+        }
+        p->crc = link_crc8_update(p->crc, b);
+        p->idx = 0;
+        p->state = ST_PAYLOAD;
         break;
 
     case ST_PAYLOAD:

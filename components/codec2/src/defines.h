@@ -54,7 +54,16 @@
 /* Pitch estimation defines */
 
 #define M_PITCH_S  0.0400       /* pitch analysis window in s           */
+/* LOCAL MODIFICATION (see ../VENDORED.md): allow the highest modelled pitch
+   to be set from the build system. Upstream is a fixed 400 Hz, which clamps
+   higher voices to a wrong fundamental. Encoder and decoder both derive their
+   quantiser bounds from this, so every board on a link must use the same
+   value - which is why it is set once in the component CMakeLists. */
+#ifdef CODEC2_PITCH_MAX_HZ
+#define P_MIN_S    (1.0/(CODEC2_PITCH_MAX_HZ))
+#else
 #define P_MIN_S    0.0025	/* minimum pitch period in s            */
+#endif
 #define P_MAX_S    0.0200	/* maximum pitch period in s            */
 
 /*---------------------------------------------------------------------------*\

@@ -21,12 +21,40 @@ Vendoring keeps `git clone && idf.py build` working with no extra steps.
 
 ## Local modifications
 
-Exactly one file is added; nothing upstream is patched:
+Two added files and one small patch:
 
-- `CMakeLists.txt` — registers `src/*.c` as an IDF component exporting `src/`.
+- `CMakeLists.txt` *(added)* — registers `src/*.c` as an IDF component
+  exporting `src/`, and sets `CODEC2_PITCH_MAX_HZ`.
+- `test/` *(added)* — a host-only demonstration of what that setting changes.
+- `src/defines.h` *(patched)* — `P_MIN_S` is now derived from
+  `CODEC2_PITCH_MAX_HZ` when that is defined, and otherwise keeps its upstream
+  value. The patch is three preprocessor lines and changes nothing unless the
+  macro is set.
 
-Keeping it to a single additive file means updating to a newer upstream is a
-matter of copying its tree over the top and restoring this file.
+### Why P_MIN_S is configurable
+
+`P_MIN_S` sets the shortest pitch period Codec 2 will model, so `1/P_MIN_S` is
+the highest fundamental it can represent. Upstream fixes it at 400 Hz. Above
+that, `encode_Wo()` clamps the quantiser index, so a 450 Hz voice is coded as
+397 Hz — not merely detuned, but resynthesised on the wrong fundamental, which
+garbles every harmonic. Children and high adult voices land right there.
+
+We build at the stock 400 Hz. 500 Hz was tried and reverted: it did not fix the
+artifact we were chasing, it coarsens the pitch step from 2.73 Hz to 3.52 Hz for
+every speaker, and it breaks compatibility with standard Codec 2. Run
+`test/run_pitch_test.sh` to see both behaviours side by side.
+
+`src/nlp.c` is patched the same way to make `CNLP` overridable - the threshold
+controlling how readily the estimator accepts a lower sub-multiple, which is
+what governs octave errors.
+
+**Both ends of a link must use the same value.** Encoder and decoder derive
+their quantiser bounds from it, so a mismatch decodes speech at the wrong
+pitch. Setting it once in `CMakeLists.txt`, which both projects share, is what
+prevents that. Both firmwares also print the configured range at boot.
+
+Updating to a newer upstream means copying its tree over the top, then
+restoring `CMakeLists.txt`, `test/` and the three-line `defines.h` guard.
 
 ## Notes for anyone updating this
 
