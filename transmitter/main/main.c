@@ -36,9 +36,15 @@
 #define TX_SRC_SINE      1
 #define TX_SOURCE        TX_SRC_ADC   /* TX_SRC_SINE for the internal tone */
 
-/* 1 = run the Opus timing benchmark at boot instead of the audio path.
- * Worth re-running after any change to bitrate, complexity or frame size. */
-#define TX_OPUS_BENCH    0
+/* Run a benchmark at boot instead of the audio path.
+ *   0 = normal operation
+ *   1 = Opus single-stream sweep: sample rate, complexity, frame size
+ *   2 = Opus multi-stream load: how many streams fit on one chip
+ *   3 = AMR-NB: all eight bitrate modes, then multi-stream load
+ *   4 = all three codecs on the same axes, including algorithmic delay
+ *   5 = specific Opus stream mixes, one core and split across two
+ * Worth re-running after any change to codec settings. */
+#define TX_BENCH         0
 
 /* Run the I2S bus at LINK_SAMPLE_RATE * ADC_DECIM and filter back down in
  * software. At 16 kHz the PCM1808 sits comfortably inside its range, so 1 is
@@ -508,12 +514,22 @@ void app_main(void)
 {
     ESP_LOGI(TAG, "LibreCom transmitter starting");
 
-#if TX_OPUS_BENCH
+#if TX_BENCH
     /* Run the benchmark on its own, with nothing else on the audio core. The
      * normal task would preempt it every frame and inflate every timing we are
      * trying to measure, so the audio path stays down until this is set to 0. */
-    ESP_LOGW(TAG, "TX_OPUS_BENCH is on: audio path disabled while measuring");
+    ESP_LOGW(TAG, "TX_BENCH is on: audio path disabled while measuring");
+#if   TX_BENCH == 5
+    opus_scenarios_run();
+#elif TX_BENCH == 4
+    codec_bench_run();
+#elif TX_BENCH == 3
+    amr_bench_run();
+#elif TX_BENCH == 2
+    opus_load_run();
+#else
     opus_bench_run();
+#endif
     return;
 #endif
 
