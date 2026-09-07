@@ -36,7 +36,7 @@ def clean_directory(directory):
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path, ignore_errors=True)
 
-def compress_audio(input_files, output_dir="compressed", mix_name="mixed"):
+def compress_audio(input_files, output_dir="compressed", mix_name="mixed", music_mode=False):
     if not (1 <= len(input_files) <= 4):
         print("Error: Please provide between 1 and 4 input files.")
         sys.exit(1)
@@ -71,33 +71,42 @@ def compress_audio(input_files, output_dir="compressed", mix_name="mixed"):
     # Build a list of encoding tasks
     tasks = []
 
-    # 1. Opus
-    for br_label, br_val in [('8k', 8000), ('12k', 12000), ('16k', 16000), ('32k', 32000)]:
-        tasks.append({
-            'name': 'opus', 'br_label': br_label, 'br_val': br_val, 'ext': 'opus',
-            'enc_args': ['-c:a', 'libopus', '-b:a', str(br_val)]
-        })
+    if music_mode:
+        # Music Opus only (from 16k up to 256k)
+        for br_label, br_val in [('16k', 16000), ('24k', 24000), ('32k', 32000), ('48k', 48000), 
+                                 ('64k', 64000), ('96k', 96000), ('128k', 128000), ('192k', 192000), ('256k', 256000)]:
+            tasks.append({
+                'name': 'opus_music', 'br_label': br_label, 'br_val': br_val, 'ext': 'opus',
+                'enc_args': ['-c:a', 'libopus', '-b:a', str(br_val)]
+            })
+    else:
+        # 1. Opus
+        for br_label, br_val in [('8k', 8000), ('12k', 12000), ('16k', 16000), ('32k', 32000)]:
+            tasks.append({
+                'name': 'opus', 'br_label': br_label, 'br_val': br_val, 'ext': 'opus',
+                'enc_args': ['-c:a', 'libopus', '-b:a', str(br_val)]
+            })
 
-    # 2. AMR-NB
-    for br_label, br_val in [('4.75k', 4750), ('7.4k', 7400), ('12.2k', 12200)]:
-        tasks.append({
-            'name': 'amrnb', 'br_label': br_label, 'br_val': br_val, 'ext': 'amr',
-            'enc_args': ['-c:a', 'libopencore_amrnb', '-ar', '8000', '-ac', '1', '-b:a', str(br_val)]
-        })
+        # 2. AMR-NB
+        for br_label, br_val in [('4.75k', 4750), ('7.4k', 7400), ('12.2k', 12200)]:
+            tasks.append({
+                'name': 'amrnb', 'br_label': br_label, 'br_val': br_val, 'ext': 'amr',
+                'enc_args': ['-c:a', 'libopencore_amrnb', '-ar', '8000', '-ac', '1', '-b:a', str(br_val)]
+            })
 
-    # 3. Codec 2
-    for mode_label, br_val in [('1200', 1200), ('2400', 2400), ('3200', 3200)]:
-        tasks.append({
-            'name': 'codec2', 'br_label': mode_label, 'br_val': br_val, 'ext': 'c2',
-            'enc_args': ['-c:a', 'libcodec2', '-ar', '8000', '-ac', '1', '-mode', mode_label]
-        })
+        # 3. Codec 2
+        for mode_label, br_val in [('1200', 1200), ('2400', 2400), ('3200', 3200)]:
+            tasks.append({
+                'name': 'codec2', 'br_label': mode_label, 'br_val': br_val, 'ext': 'c2',
+                'enc_args': ['-c:a', 'libcodec2', '-ar', '8000', '-ac', '1', '-mode', mode_label]
+            })
 
-    # 4. ADPCM (IMA WAV)
-    for sr, br_label, br_val in [('8000', '32k', 32000), ('16000', '64k', 64000), ('32000', '128k', 128000)]:
-        tasks.append({
-            'name': 'adpcm', 'br_label': br_label, 'br_val': br_val, 'ext': 'wav',
-            'enc_args': ['-c:a', 'adpcm_ima_wav', '-ar', sr, '-ac', '1']
-        })
+        # 4. ADPCM (IMA WAV)
+        for sr, br_label, br_val in [('8000', '32k', 32000), ('16000', '64k', 64000), ('32000', '128k', 128000)]:
+            tasks.append({
+                'name': 'adpcm', 'br_label': br_label, 'br_val': br_val, 'ext': 'wav',
+                'enc_args': ['-c:a', 'adpcm_ima_wav', '-ar', sr, '-ac', '1']
+            })
 
     # Sort tasks by numeric bitrate (br_val)
     tasks.sort(key=lambda x: x['br_val'])
@@ -159,11 +168,12 @@ def compress_audio(input_files, output_dir="compressed", mix_name="mixed"):
     print("\nFinished processing all algorithms!")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Normalize, compress, decode, and optionally mix up to 4 audio files using Opus, AMR-NB, Codec 2, and ADPCM.")
+    parser = argparse.ArgumentParser(description="Normalize, compress, decode, and optionally mix up to 4 audio files.")
     parser.add_argument("input_files", nargs='+', help="Path to 1 to 4 input audio files")
     parser.add_argument("--outdir", default="compressed", help="Output directory")
     parser.add_argument("--mix-name", default="mixed", help="Custom name for the combined output files (e.g., dual-voice)")
+    parser.add_argument("--music", action="store_true", help="Enable music mode (tests only Opus from 16kbps up to 256kbps)")
     
     args = parser.parse_args()
     check_ffmpeg()
-    compress_audio(args.input_files, args.outdir, args.mix_name)
+    compress_audio(args.input_files, args.outdir, args.mix_name, args.music)
