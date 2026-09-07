@@ -16,10 +16,7 @@ dependencies.lock
 compression-alg-tests/compressed/
 compression-alg-tests/compressed.zip
 
-# Source audio for the codec comparison. Deliberately not versioned: music1.flac
-# alone is 77 MB and git keeps blobs forever, and the material may not be ours
-# to redistribute. The script that consumes them is tracked; drop your own files
-# in alongside it.
+# The short speech and vocal test clips ARE tracked, so the comparison can be
+# reproduced from a clean clone. Only the large source material is excluded -
+# music1.flac alone is 77 MB and git keeps blobs forever.
 compression-alg-tests/*.flac
-compression-alg-tests/*.aac
-compression-alg-tests/*.wav
