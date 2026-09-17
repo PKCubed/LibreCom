@@ -4,22 +4,24 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![License: CERN-OHL-S](https://img.shields.io/badge/License-CERN--OHL--S-orange.svg)](https://ohwr.org/cern_ohl_s_v2.txt)
 
-Welcome to the **LibreCom** repository. This project aims to build a fully open-source, digital wireless intercom system designed for live event production, theater crews, and outdoor decentralized communication (like skiing or hiking). 
+Welcome to the **LibreCom** repository. This project aims to build a fully open-source, digital wireless intercom system designed for live event production, theater crews, and other communication applications.
 
-By combining the wall-penetrating power of **Sub-GHz radios**, the ultra-low bandwidth of the **Codec 2 vocoder**, and a custom **TDMA (Time-Division Multiple Access)** protocol, this system supports multiple simultaneous talkers and infinite listeners over distances that standard 2.4GHz/Wi-Fi systems cannot reach.
+By combining the wall-penetrating power of **Sub-GHz radios**, high quality low bandwidth OPUS audio compression, and a custom **TDMA (Time-Division Multiple Access)** protocol, this system supports multiple simultaneous talkers and infinite listeners over distances that standard 2.4GHz/Wi-Fi systems cannot reach.
 
 ---
 
 ## System Feature Goals
 
 ### Overall System
-* **Low Latency:** Latency should be low enough such that conversations can be made quickly. Ideally, when broadcast to the hub and back to the person talking, the latency is low enough that it doesn't "speach jam" the person talking. Alternatively, some method of removing the person talking from the feed they receive back may need to be implemented.
+* **Low Latency:** Latency should be low enough such that conversations can be made quickly.
+* **Flexibility:** Each belt pack should support any standard TRRS headset. The hub should allow analog connections as well to interface with other systems.
 
 ### The Belt Packs (End-User Nodes)
 The belt packs are designed to be cheap, rugged, and feature-rich for live-event professionals.
-* **Standard Headset Support:** Uses universal TRRS (3.5mm) headsets (CTIA/OMTP).
+* **Standard Headset Support:** Uses universal TRRS (3.5mm) headsets (CTIA).
 * **Local IEM Mixing:** Features an external stereo input jack. You can plug in an In-Ear Monitor (IEM) pack or other device, and the belt pack will mix this audio locally with the coms feed fed into the headset.
 * **Spatial Panning:** Comm audio can be software-panned entirely to the Left or Right ear, allowing users to separate crew chatter from program audio.
+* **Audio Ducking** User's can configure the belt packs to duck other audio making way for priority talkers.
 * **Physical Controls:**
   * Volume Knob
   * Push-To-Talk (PTT) Button
@@ -33,7 +35,7 @@ For structured events (theater, concerts), the system relies on a Base Station t
 * **Hardware Outputs:** Multiple physical audio outputs on the base station that can be routed in software (e.g., routing "Talk Group A" to Output 1, and "Talk Group B" to Output 2 for the stage manager's console).
 * **Web UI Management:** The base station hosts a local web server interface. Stage managers can connect via phone/laptop to change user volumes, assign talk groups, configure priorities, and monitor battery levels.
 
-### Decentralized "Mesh" Mode
+### Decentralized "Mesh" Mode (stretch goal)
 No base station? No problem. The belt packs can be configured to operate in a completely decentralized mode. Perfect for outdoor sports (skiing, hiking, airsoft) where a group of friends can communicate directly point-to-point like highly advanced digital walkie-talkies.
 
 ---
@@ -42,26 +44,26 @@ No base station? No problem. The belt packs can be configured to operate in a co
 
 The hardware is designed to decouple the heavy digital signal processing from the strict timing requirements of the radio link.
 
-* **Belt Pack Main Processor (MCU):** Raspberry Pi RP2350. These dual-core chips feature hardware DSP instructions to easily crunch the Codec 2 voice compression math.
-* **Radio Transceiver:** RFM69HCW running in the 915 MHz (US) / 868 MHz (EU) ISM bands. Offloading the radio to an SPI peripheral ensures pristine timing for the TDMA frames.
-* **Audio Frontend:** I2S Audio DAC and ADC IC(s) with amplification for both headphones and for a microphone.
-* **The Hub:** Raspberry Pi Hat with RFM69HCW, I2S ADCs and DACs for physical audio IO, and some kind of physical user interface for quick adjustments to the system's configuration
+* **Belt Pack Main Processor (MCU):** ESP32-S3
+* **Radio Transceiver:** SX1262
+* **Audio Frontend:** I2S Audio DAC and ADC IC with amplification for both headphones and for a microphone.
+* **The Hub:** Raspberry Pi Hat with custom hat including SX1262, I2S ADCs and DACs for physical audio IO, and some kind of physical user interface for quick adjustments to the system's configuration
 
 ---
 
 ## Project Roadmap
 
 - [ ] **Phase 1: Proof of Concept**
-  - Connect MCU to I2S ADC/DAC and establish I2S audio pass-through.
-  - Implement Codec 2 encoding/decoding loopback in firmware.
+  - Connect MCU to I2S ADC/DAC and establish I2S and internal analog audio pass-through.
+  - Implement OPUS encoding/decoding loopback in firmware, then link two belt packs via wires to transmit audio.
 - [ ] **Phase 2: The Radio Link**
-  - Connect the SPI RFM69 modules.
-  - Successfully transmit Codec 2 payloads point-to-point (Simplex).
+  - Connect the sx1262
+  - Successfully transmit OPUS audio in one direction
 - [ ] **Phase 3: The TDMA Matrix**
-  - Implement the Base Station TDMA master clock.
-  - Achieve 4 simultaneous talkers and 1 mixed broadcast downlink.
+  - Implement the Base Station TDMA master.
+  - Achieve 4 simultaneous talkers with the stretch goal of a larger additional 48kbps OPUS stream.
 - [ ] **Phase 4: Hardware Prototyping**
-  - Design custom V1 PCBs integrating the MCU, Radio, Codec, and physical inputs (PTT, Knobs, IEM jacks).
+  - Design custom PCBs integrating the MCU, Radio, Codec, and physical inputs (PTT, Knobs, IEM jacks).
 - [ ] **Phase 5: UI & Polish**
   - Build the Base Station Web UI.
   - Implement VOX, Panning, and User Profiles.
