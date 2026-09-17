@@ -6764,7 +6764,7 @@
 	)
 	(text "Headset Detect Pin -->"
 		(exclude_from_sim no)
-		(at 42.926 165.608 0)
+		(at 41.402 166.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6878,6 +6878,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 163.83) (xy 114.3 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c80b38a-4f48-435a-b5a6-522f700a0636")
+	)
+	(wire
+		(pts
 			(xy 81.28 182.88) (xy 83.82 182.88)
 		)
 		(stroke
@@ -6885,6 +6895,16 @@
 			(type default)
 		)
 		(uuid "28ff8d54-1655-414b-bacd-31a3a586bdea")
+	)
+	(wire
+		(pts
+			(xy 115.57 160.02) (xy 114.3 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b09a1da-59d6-43d2-839b-d2fb8976c16c")
 	)
 	(wire
 		(pts
@@ -7158,7 +7178,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 160.02) (xy 110.49 160.02)
+			(xy 105.41 160.02) (xy 106.68 160.02)
 		)
 		(stroke
 			(width 0)
@@ -7268,7 +7288,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 163.83) (xy 110.49 163.83)
+			(xy 105.41 163.83) (xy 106.68 163.83)
 		)
 		(stroke
 			(width 0)
@@ -14581,76 +14601,6 @@
 			"AAAAAAAJQEAHAAAAACAB/j9PQj5gTs+O5QAAAABJRU5ErkJggg=="
 		)
 	)
-	(label "MIC"
-		(at 154.94 143.51 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0e46cc92-1158-450f-8c13-69ebd6d1405d")
-	)
-	(label "MIC"
-		(at 118.11 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "50024400-13d4-4797-8ba8-421e3e702412")
-	)
-	(label "Left Audio"
-		(at 154.94 151.13 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5a0b055b-a10c-40b9-8ff1-6945e56a6781")
-	)
-	(label "Left Audio"
-		(at 118.11 160.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "711c876a-85af-417a-8fe3-811fb9e1367d")
-	)
-	(label "Right Audio"
-		(at 154.94 148.59 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9e790582-5527-42dd-8b33-5c6e035329b2")
-	)
-	(label "MIC"
-		(at 60.96 166.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a229d88a-fc3d-4ce3-ae61-380635cab8c0")
-	)
-	(label "Right Audio"
-		(at 118.11 163.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8895f0f-5712-4d4e-b0b6-d1639e2156b2")
-	)
 	(global_label "I^{2}C_SCL"
 		(shape input)
 		(at 62.23 173.99 180)
@@ -14688,6 +14638,30 @@
 		(uuid "0b758b10-bb37-4578-9c46-5ad6a44e1407")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3158 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "HS_Left"
+		(shape input)
+		(at 154.94 151.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0b785030-e280-47a7-afb1-9f5689804add")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.8791 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14747,6 +14721,30 @@
 			)
 		)
 	)
+	(global_label "MIC"
+		(shape input)
+		(at 60.96 166.37 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "36a4997f-fdf4-4ce7-b09d-89b91588004d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 54.6486 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "CODEC_RESET"
 		(shape input)
 		(at 104.14 58.42 180)
@@ -14768,6 +14766,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "HS_Left"
+		(shape input)
+		(at 115.57 160.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "58edc7df-87eb-44f0-9fcd-3d14388061c4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.6309 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -14891,6 +14913,54 @@
 			)
 		)
 	)
+	(global_label "MIC"
+		(shape input)
+		(at 118.11 137.16 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "651f4503-3a1a-4ef5-a392-d848c8c67178")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 124.4214 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "HS_Right"
+		(shape input)
+		(at 154.94 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6bb29fed-9511-46c0-a949-676d4a252c9a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 143.5487 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "I^{2}S_SPK_DATA"
 		(shape input)
 		(at 52.07 151.13 180)
@@ -14912,6 +14982,54 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "MIC"
+		(shape input)
+		(at 154.94 143.51 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c821e50e-ef4b-4bef-b0de-99646db967db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.6286 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "HS_Right"
+		(shape input)
+		(at 115.57 163.83 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c97e4b91-c813-4999-bf86-51781bad7638")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.9613 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -16783,7 +16901,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0805,47uF")
-		(at 114.3 163.83 90)
+		(at 110.49 163.83 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -16794,7 +16912,7 @@
 		(dnp no)
 		(uuid "1bbaec77-39b3-4599-88ac-8f6046e33fa5")
 		(property "Reference" "C6"
-			(at 112.268 164.846 90)
+			(at 108.458 164.846 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16804,7 +16922,7 @@
 			)
 		)
 		(property "Value" "47uF"
-			(at 116.586 164.592 90)
+			(at 112.776 164.592 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16814,7 +16932,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:C_0805"
-			(at 114.3 162.052 90)
+			(at 110.49 162.052 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16825,7 +16943,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21A476MQYNNNE_C16780.pdf"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16836,7 +16954,7 @@
 			)
 		)
 		(property "Description" "6.3V 47uF X5R ±20% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16847,7 +16965,7 @@
 			)
 		)
 		(property "LCSC" "C16780"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16858,7 +16976,7 @@
 			)
 		)
 		(property "Stock" "1584628"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16869,7 +16987,7 @@
 			)
 		)
 		(property "Price" "0.030USD"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16880,7 +16998,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16891,7 +17009,7 @@
 			)
 		)
 		(property "Minimum Qty" "5"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16902,7 +17020,7 @@
 			)
 		)
 		(property "Attrition Qty" "6"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16913,7 +17031,7 @@
 			)
 		)
 		(property "Class" "Basic Component"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16924,7 +17042,7 @@
 			)
 		)
 		(property "Category" "Capacitors,Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16935,7 +17053,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16946,7 +17064,7 @@
 			)
 		)
 		(property "Part" "CL21A476MQYNNNE"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16957,7 +17075,7 @@
 			)
 		)
 		(property "Voltage Rated" "6.3V"
-			(at 114.554 166.116 90)
+			(at 110.744 166.116 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16967,7 +17085,7 @@
 			)
 		)
 		(property "Tolerance" "±20%"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16978,7 +17096,7 @@
 			)
 		)
 		(property "Capacitance" "47uF"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16989,7 +17107,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X5R"
-			(at 114.3 163.83 0)
+			(at 110.49 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19051,7 +19169,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0805,47uF")
-		(at 114.3 160.02 90)
+		(at 110.49 160.02 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19061,7 +19179,7 @@
 		(dnp no)
 		(uuid "97801d51-fb83-4b25-ab55-8f252ee8518b")
 		(property "Reference" "C5"
-			(at 112.268 159.004 90)
+			(at 108.458 159.004 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19071,7 +19189,7 @@
 			)
 		)
 		(property "Value" "47uF"
-			(at 116.586 159.258 90)
+			(at 112.776 159.258 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19081,7 +19199,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:C_0805"
-			(at 114.3 161.798 90)
+			(at 110.49 161.798 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19092,7 +19210,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21A476MQYNNNE_C16780.pdf"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19103,7 +19221,7 @@
 			)
 		)
 		(property "Description" "6.3V 47uF X5R ±20% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19114,7 +19232,7 @@
 			)
 		)
 		(property "LCSC" "C16780"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19125,7 +19243,7 @@
 			)
 		)
 		(property "Stock" "1584628"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19136,7 +19254,7 @@
 			)
 		)
 		(property "Price" "0.030USD"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19147,7 +19265,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19158,7 +19276,7 @@
 			)
 		)
 		(property "Minimum Qty" "5"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19169,7 +19287,7 @@
 			)
 		)
 		(property "Attrition Qty" "6"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19180,7 +19298,7 @@
 			)
 		)
 		(property "Class" "Basic Component"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19191,7 +19309,7 @@
 			)
 		)
 		(property "Category" "Capacitors,Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19202,7 +19320,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19213,7 +19331,7 @@
 			)
 		)
 		(property "Part" "CL21A476MQYNNNE"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19224,7 +19342,7 @@
 			)
 		)
 		(property "Voltage Rated" "6.3V"
-			(at 114.554 157.734 90)
+			(at 110.744 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19234,7 +19352,7 @@
 			)
 		)
 		(property "Tolerance" "±20%"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19245,7 +19363,7 @@
 			)
 		)
 		(property "Capacitance" "47uF"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19256,7 +19374,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X5R"
-			(at 114.3 160.02 0)
+			(at 110.49 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
