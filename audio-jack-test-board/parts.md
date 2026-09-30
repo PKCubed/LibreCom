@@ -1,0 +1,22 @@
+Larger trs
+C16684
+C22355739
+C145816
+C5123138
+C707253
+
+smaller trs
+C668607
+C2689690
+C18167
+
+Larger trrs
+C5146693 (This one looks cool...)
+C128995
+C718144
+
+smaller trrs
+c2884926
+C309272
+C22459514
+C707251
