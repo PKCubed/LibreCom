@@ -9813,8 +9813,8 @@
 		(uuid "0406972b-caca-4353-993e-54d3bdb845ac")
 	)
 	(rectangle
-		(start 108.712 63.5)
-		(end 133.858 17.78)
+		(start 108.712 17.78)
+		(end 133.858 63.5)
 		(stroke
 			(width 0)
 			(type default)
@@ -9843,6 +9843,28 @@
 			)
 		)
 		(uuid "5df916e3-3a70-4ce3-b6e5-05610d6a7faf")
+	)
+	(text "GPIO19\nGPIO20\nGPIO21\nGPIO26\nGPIO48\nGPIO47\nGPIO33\nGPIO34\nGPIO35\nGPIO36\nGPIO0\nRST\nGPIO43\nGPIO44\nVe\nVe\n5V\nGND"
+		(exclude_from_sim no)
+		(at 133.35 18.542 0)
+		(effects
+			(font
+				(size 1.5748 1.5748)
+			)
+			(justify right top)
+		)
+		(uuid "610a53c9-efb8-4009-a80c-53f03b9075d3")
+	)
+	(text "GPIO7\nGPIO6\nGPIO5\nGPIO4\nGPIO3\nGPIO2\nGPIO1\nGPIO38\nGPIO39\nGPIO40\nGPIO41\nGPIO42\nGPIO45\nGPIO46\nGPIO37\n3V3\n3V3\nGND"
+		(exclude_from_sim no)
+		(at 109.22 18.542 0)
+		(effects
+			(font
+				(size 1.5748 1.5748)
+			)
+			(justify left top)
+		)
+		(uuid "b3dc29ee-9132-42de-8b04-64017a19bf26")
 	)
 	(text "Headset Detect Pin -->"
 		(exclude_from_sim no)
@@ -10071,8 +10093,48 @@
 		(uuid "e999b539-5b25-480b-bec2-042a3dadbe6e")
 	)
 	(no_connect
+		(at 138.43 54.61)
+		(uuid "0fa5b39b-8a39-4c39-b95f-577273190c83")
+	)
+	(no_connect
+		(at 138.43 44.45)
+		(uuid "1551d378-a2d0-48c2-99a9-cc479cc95d91")
+	)
+	(no_connect
+		(at 104.14 54.61)
+		(uuid "17f13892-2da1-4f45-bc5c-14193bc7bd18")
+	)
+	(no_connect
+		(at 104.14 29.21)
+		(uuid "1b2f4ca3-8360-4be3-9223-fd80232377b6")
+	)
+	(no_connect
+		(at 138.43 57.15)
+		(uuid "1fbaf334-9a29-42a2-811e-c2f977fe9b85")
+	)
+	(no_connect
+		(at 138.43 39.37)
+		(uuid "4ad66bed-0a0a-4b07-8a01-d0e5032127d3")
+	)
+	(no_connect
+		(at 138.43 41.91)
+		(uuid "549428a2-829d-485d-b623-6ae92f59f043")
+	)
+	(no_connect
+		(at 104.14 34.29)
+		(uuid "5f838a39-3026-41c2-b09a-7ead938ac141")
+	)
+	(no_connect
+		(at 138.43 24.13)
+		(uuid "6a57e83d-47b6-4d15-af44-2146de004ad8")
+	)
+	(no_connect
 		(at 252.73 85.09)
 		(uuid "6b3b7c4d-ddc5-4c6e-8c01-16c8c8e05971")
+	)
+	(no_connect
+		(at 138.43 46.99)
+		(uuid "6c243fa6-7797-4b53-9435-4d578de5c616")
 	)
 	(no_connect
 		(at 104.14 19.05)
@@ -10081,6 +10143,18 @@
 	(no_connect
 		(at 252.73 82.55)
 		(uuid "c8c452ca-da00-403b-a55d-6bc39c12ec89")
+	)
+	(no_connect
+		(at 138.43 26.67)
+		(uuid "d5c38206-f5bd-4710-b7a0-f2be56d7eb43")
+	)
+	(no_connect
+		(at 138.43 49.53)
+		(uuid "e537b242-67f3-462a-9b40-0c3860f26a81")
+	)
+	(no_connect
+		(at 138.43 52.07)
+		(uuid "f4d01c1b-a127-4126-8905-c0804565bbd6")
 	)
 	(wire
 		(pts
@@ -20114,6 +20188,7 @@
 		(uuid "02c782a4-277f-4e32-b5e4-26becdbf4c36")
 		(property "Reference" "J2"
 			(at 132.08 41.91 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -35279,6 +35354,7 @@
 		(uuid "f63878c0-0a39-4ac6-8478-92850f9d859a")
 		(property "Reference" "J1"
 			(at 110.236 41.91 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
