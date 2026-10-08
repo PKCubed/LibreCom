@@ -34113,7 +34113,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -36120,7 +36120,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
 			(at 252.73 92.71 0)
 			(hide yes)
 			(show_name no)
