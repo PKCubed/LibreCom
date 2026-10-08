@@ -19202,6 +19202,7 @@
 		(property "Reference" "U2"
 			(at -1.402717 -6.225 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "693312b1-158b-4980-bc72-09f187429273")
 			(effects
 				(font
