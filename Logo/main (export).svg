@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24.856611mm"
+   height="5.0139456mm"
+   viewBox="0 0 24.856611 5.0139456"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="main.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.3638608"
+     inkscape:cx="234.55192"
+     inkscape:cy="438.03834"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="136.21408"
+       y="401.91562"
+       width="270.74649"
+       height="159.34424"
+       id="rect236-9-1" />
+    <rect
+       x="136.21408"
+       y="401.91562"
+       width="270.74649"
+       height="159.34424"
+       id="rect236-7-2-4" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-72.603041,-114.41916)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,36.167546,6.8566939)"
+       id="text234-2-2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.9019px;font-family:Dosis;-inkscape-font-specification:'Dosis, @wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 700;white-space:pre;shape-inside:url(#rect236-9-1);display:inline;fill:#5f00eb;fill-opacity:1;stroke:none;stroke-width:1.13386"><tspan
+         x="136.21484"
+         y="425.26155"
+         id="tspan3224">Libre</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,49.955269,6.7941019)"
+       id="text234-5-8-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.9019px;font-family:Dosis;-inkscape-font-specification:'Dosis, @wght=500';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 500;white-space:pre;shape-inside:url(#rect236-7-2-4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.13386"><tspan
+         x="136.21484"
+         y="425.26155"
+         id="tspan3226">Com</tspan></text>
+  </g>
+</svg>
