@@ -3265,6 +3265,276 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "MPBS-22H01-F14:MPBS-22H01-F14"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "S"
+				(at 26.67 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "MPBS-22H01-F14"
+				(at 26.67 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "MPBS22H01F14"
+				(at 26.67 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://knitter-switch.com/en/product-category/pushbutton-switches/mpbs/"
+				(at 26.67 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "SWITCH PUSHBUTTON 2-POLE MOM-ON"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "11.5"
+				(at 26.67 -394.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "KNITTER-SWITCH"
+				(at 26.67 -494.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "MPBS-22H01-F14"
+				(at 26.67 -594.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" ""
+				(at 26.67 -694.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" ""
+				(at 26.67 -794.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Part Number" ""
+				(at 26.67 -894.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Price/Stock" ""
+				(at 26.67 -994.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "MPBS-22H01-F14_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 25.4 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "NO_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "COM_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "NC_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 0 180)
+					(length 5.08)
+					(name "NO_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 -2.54 180)
+					(length 5.08)
+					(name "COM_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 -5.08 180)
+					(length 5.08)
+					(name "NC_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_JLCPCB-Capacitors:0402,100nF"
 			(pin_numbers
 				(hide yes)
@@ -10164,6 +10434,28 @@
 		)
 		(uuid "b64bb37d-6ff9-471e-bd51-d1121cf5fb89")
 	)
+	(text "UART0 TX"
+		(exclude_from_sim no)
+		(at 139.7 49.784 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "25522057-4fab-4cae-897a-a88a04739832")
+	)
+	(text "UART0 RX"
+		(exclude_from_sim no)
+		(at 139.7 52.324 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "40cf9f78-4240-4ddb-950b-1cd0c888c095")
+	)
 	(text "This symbol is\nBAD and WRONG"
 		(exclude_from_sim no)
 		(at 263.652 87.884 0)
@@ -10215,6 +10507,58 @@
 		)
 		(uuid "7ec36406-2cc8-4a16-b555-8856cb9002d1")
 	)
+	(text "Bat ADC EN"
+		(exclude_from_sim no)
+		(at 96.774 54.864 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "88915342-5dce-4767-af0c-5f5707d6fd4b")
+	)
+	(text "Onboard boot button"
+		(exclude_from_sim no)
+		(at 139.7 44.704 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "94b1b3dc-ad28-416d-bd80-d96fe4d9d40f")
+	)
+	(text "OLED Reset"
+		(exclude_from_sim no)
+		(at 145.034 24.384 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a80f8135-4b1d-4433-bf63-67fa6707780a")
+	)
+	(text "Vext Control"
+		(exclude_from_sim no)
+		(at 139.7 42.164 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "adaefebf-b124-41c3-a83f-5b54d4f36f99")
+	)
+	(text "Onboard white LED"
+		(exclude_from_sim no)
+		(at 148.844 39.624 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "add3fa10-1102-4363-99c4-022b90c5ced2")
+	)
 	(text "GPIO7\nGPIO6\nGPIO5\nGPIO4\nGPIO3\nGPIO2\nGPIO1\nGPIO38\nGPIO39\nGPIO40\nGPIO41\nGPIO42\nGPIO45\nGPIO46\nGPIO37\n3V3\n3V3\nGND"
 		(exclude_from_sim no)
 		(at 109.22 18.542 0)
@@ -10245,6 +10589,16 @@
 			)
 		)
 		(uuid "d8039b1a-055c-4421-b374-16c29e572494")
+	)
+	(text "Battery ADC"
+		(exclude_from_sim no)
+		(at 96.774 34.544 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fc8f960a-aaa5-4ebb-b168-8478cc3b2fb0")
 	)
 	(junction
 		(at 167.64 119.38)
@@ -10525,10 +10879,6 @@
 	(no_connect
 		(at 138.43 46.99)
 		(uuid "6c243fa6-7797-4b53-9435-4d578de5c616")
-	)
-	(no_connect
-		(at 138.43 26.67)
-		(uuid "d5c38206-f5bd-4710-b7a0-f2be56d7eb43")
 	)
 	(no_connect
 		(at 138.43 49.53)
@@ -20806,6 +21156,30 @@
 			)
 		)
 	)
+	(global_label "Button_PTT"
+		(shape input)
+		(at 138.43 26.67 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a72e13d9-741b-48b5-a3a4-adcec15a670d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 151.7564 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "I^{2}S_MCLK"
 		(shape input)
 		(at 68.58 99.06 0)
@@ -22557,6 +22931,184 @@
 			(project "companion-board"
 				(path "/749d8ef9-42d1-4901-85bb-9048dd5cf6b3"
 					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MPBS-22H01-F14:MPBS-22H01-F14")
+		(at 237.49 30.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d81b8d4-eb92-41c6-bc06-50cb81dd8b5a")
+		(property "Reference" "S3"
+			(at 252.73 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MPBS-22H01-F14"
+			(at 252.73 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Footprints:MPBS22H01F14"
+			(at 264.16 125.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://knitter-switch.com/en/product-category/pushbutton-switches/mpbs/"
+			(at 264.16 225.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "SWITCH PUSHBUTTON 2-POLE MOM-ON"
+			(at 237.49 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "11.5"
+			(at 264.16 425.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "KNITTER-SWITCH"
+			(at 264.16 525.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MPBS-22H01-F14"
+			(at 264.16 625.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 264.16 725.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 264.16 825.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 264.16 925.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 264.16 1025.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "4"
+			(uuid "608a1d7e-4586-49d8-a1d4-02317de58b9c")
+		)
+		(pin "1"
+			(uuid "37e55cbe-d4a3-4fb2-ba7a-a830749b0264")
+		)
+		(pin "2"
+			(uuid "7bf2564f-4981-4f76-84fb-1df2e7b61374")
+		)
+		(pin "3"
+			(uuid "6f02dd04-9f2c-459c-bd0c-9b0bce7ee7e6")
+		)
+		(pin "6"
+			(uuid "8ab8e6ac-af55-48f2-a04f-0389b7b2c622")
+		)
+		(pin "5"
+			(uuid "bbc405db-c6f6-4b63-8e00-0c07105bc3f4")
+		)
+		(instances
+			(project "companion-board"
+				(path "/749d8ef9-42d1-4901-85bb-9048dd5cf6b3"
+					(reference "S3")
 					(unit 1)
 				)
 			)
