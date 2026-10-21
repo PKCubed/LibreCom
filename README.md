@@ -69,7 +69,7 @@ The hardware is designed to decouple the heavy digital signal processing from th
 
 ---
 
-## ⚖️ Licensing
+## Licensing
 
 To ensure this project remains open and beneficial to the community while allowing for commercial manufacturing:
 
