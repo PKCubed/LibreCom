@@ -8,6 +8,24 @@ Welcome to the **LibreCom** repository. This project aims to build a fully open-
 
 By combining the wall-penetrating power of **Sub-GHz radios**, high quality low bandwidth OPUS audio compression, and a custom **TDMA (Time-Division Multiple Access)** protocol, this system supports multiple simultaneous talkers and infinite listeners over distances that standard 2.4GHz/Wi-Fi systems cannot reach.
 
+## Sponsored by PCBWay!
+
+<p align="center">
+  <a href="https://www.pcbway.com/">
+    <img src="Logo/pcbway-logo.png" alt="PCBWay" width="300">
+  </a>
+</p>
+
+A huge thank you to **[PCBWay](https://www.pcbway.com/)** for sponsoring LibreCom!
+
+PCBWay is providing PCB fabrication and assembly for our prototype hardware. Hardware projects like this one need many board revisions to get RF layout, audio grounding, and power design right. Their support lets us iterate quickly without the cost of each spin slowing development down.
+
+We're currently just about to order our first PCB revision, and once we get it back we'll upload pictures and share our experience here.
+
+If you're building your own LibreCom hardware, the Gerber files in the production folders are ready to upload directly to PCBWay. They also offer **PCB assembly**, **stencils**, **3D printing**, and **CNC machining**, which are useful if you want a finished enclosure for your belt pack too.
+
+**[Order LibreCom boards from PCBWay](https://www.pcbway.com/)**
+
 ---
 
 ## System Feature Goals
