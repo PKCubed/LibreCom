@@ -27593,7 +27593,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Heltec v3\nCompanion\nRev 1.1"
+	(gr_text "Heltec v3\nCompanion\nRev 1.2"
 		(at 134.3 82.55 90)
 		(layer "F.SilkS")
 		(uuid "daa0084a-ee7f-4a71-baca-1b236cb530db")
