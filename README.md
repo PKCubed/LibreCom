@@ -69,25 +69,6 @@ The hardware is designed to decouple the heavy digital signal processing from th
 
 ---
 
-## Project Roadmap
-
-- [ ] **Phase 1: Proof of Concept**
-  - Connect MCU to I2S ADC/DAC and establish I2S and internal analog audio pass-through.
-  - Implement OPUS encoding/decoding loopback in firmware, then link two belt packs via wires to transmit audio.
-- [ ] **Phase 2: The Radio Link**
-  - Connect the sx1262
-  - Successfully transmit OPUS audio in one direction
-- [ ] **Phase 3: The TDMA Matrix**
-  - Implement the Base Station TDMA master.
-  - Achieve 4 simultaneous talkers with the stretch goal of a larger additional 48kbps OPUS stream.
-- [ ] **Phase 4: Hardware Prototyping**
-  - Design custom PCBs integrating the MCU, Radio, Codec, and physical inputs (PTT, Knobs, IEM jacks).
-- [ ] **Phase 5: UI & Polish**
-  - Build the Base Station Web UI.
-  - Implement VOX, Panning, and User Profiles.
-
----
-
 ## ⚖️ Licensing
 
 To ensure this project remains open and beneficial to the community while allowing for commercial manufacturing:
@@ -96,6 +77,3 @@ To ensure this project remains open and beneficial to the community while allowi
 * **Hardware / PCBs:** Licensed under the **CERN-OHL-S** (Strongly Reciprocal). 
 
 You are free to build, use, and sell this hardware. However, if you modify the circuit board designs or the firmware and distribute the resulting product, you must share your modifications back with the community under the same open licenses.
-
----
-*Built by the open-source live production community.*
