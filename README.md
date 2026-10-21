@@ -6,7 +6,9 @@
 
 Welcome to the **LibreCom** repository. This project aims to build a fully open-source, digital wireless intercom system designed for live event production, theater crews, and other communication applications.
 
-By combining the wall-penetrating power of **Sub-GHz radios**, high quality low bandwidth OPUS audio compression, and a custom **TDMA (Time-Division Multiple Access)** protocol, this system supports multiple simultaneous talkers and infinite listeners over distances that standard 2.4GHz/Wi-Fi systems cannot reach.
+By combining the wall-penetrating power of **Sub-GHz radio**, high quality low bandwidth **OPUS audio compression**, and a custom **TDMA (Time-Division Multiple Access)** protocol, this system supports multiple simultaneous talkers and infinite listeners over distances that standard 2.4GHz/Wi-Fi systems cannot reach.
+
+This project wont be quite as feature rich as the top-of-the-line communication systems on the market, but with it's incredibly low price and open-source nature, we hope for it to reach into the live event production world.
 
 ## Sponsored by PCBWay!
 
