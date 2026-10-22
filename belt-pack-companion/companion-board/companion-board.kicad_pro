@@ -60,7 +60,20 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|134335000|38735000|a5bd64d0-2d46-44b3-977e-8a66e4f9fa03|d47c077b-bdb6-4d60-be74-0e3488534508",
+          ""
+        ],
+        [
+          "courtyards_overlap|134792700|51435000|c0b9f5ff-bcb3-4bc6-aad7-5a1a0ef377e6|d47c077b-bdb6-4d60-be74-0e3488534508",
+          ""
+        ],
+        [
+          "courtyards_overlap|135294773|51435000|a5bd64d0-2d46-44b3-977e-8a66e4f9fa03|c0b9f5ff-bcb3-4bc6-aad7-5a1a0ef377e6",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -70,7 +83,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "ignore",
+        "courtyards_overlap": "error",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
@@ -657,7 +670,7 @@
         "uuid": "749d8ef9-42d1-4901-85bb-9048dd5cf6b3"
       }
     ],
-    "used_designators": "R8",
+    "used_designators": "#SYM1,R8",
     "variants": []
   },
   "sheets": [
