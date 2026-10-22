@@ -60,12 +60,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "npth_inside_courtyard|102990000|41490000|739dea37-83d3-4d9f-8fb2-2c51071d5d02|4d3a7a85-60c3-4aec-a5b6-55b3d1392e8f",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -662,7 +657,7 @@
         "uuid": "749d8ef9-42d1-4901-85bb-9048dd5cf6b3"
       }
     ],
-    "used_designators": "H1-3",
+    "used_designators": "R8",
     "variants": []
   },
   "sheets": [
