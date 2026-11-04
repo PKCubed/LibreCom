@@ -75,7 +75,7 @@ The hardware is designed to decouple the heavy digital signal processing from th
 
 To ensure this project remains open and beneficial to the community while allowing for commercial manufacturing:
 
-* **Software / Firmware:** Licensed under the **GNU GPLv3**. *(Note: This complies with the underlying LGPL license of the Codec 2 library).*
+* **Software / Firmware:** Licensed under the **GNU GPLv3**.
 * **Hardware / PCBs:** Licensed under the **CERN-OHL-S** (Strongly Reciprocal). 
 
 You are free to build, use, and sell this hardware. However, if you modify the circuit board designs or the firmware and distribute the resulting product, you must share your modifications back with the community under the same open licenses.
